@@ -3,18 +3,18 @@ package logica;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Entity;
 
+@Entity
 public class Odontologo extends Persona{
     
-    private int idOdontologo;
     private String especialidad;
     private List<Turno> listaTurnos;
     private Usuario unUsuario;
     private Horario unHorario;
 
-    public Odontologo(int idOdontologo, String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
+    public Odontologo(String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
         super(dni, nombre, apellido, direccion, telefono, fechaNac);
-        this.idOdontologo = idOdontologo;
         this.especialidad = especialidad;
         this.listaTurnos = listaTurnos;
         this.unUsuario = unUsuario;
@@ -43,14 +43,6 @@ public class Odontologo extends Persona{
 
     public void setUnHorario(Horario unHorario) {
         this.unHorario = unHorario;
-    }
-
-    public int getIdOdontologo() {
-        return idOdontologo;
-    }
-
-    public void setIdOdontologo(int idOdontologo) {
-        this.idOdontologo = idOdontologo;
     }
 
     public String getEspecialidad() {

@@ -2,13 +2,15 @@
 package logica;
 
 import java.util.Date;
+import javax.persistence.Entity;
 
 public class Secretario extends Persona{
     
     private int idSecretario;
     private String sector;
     private Usuario unUsuario;
-
+    
+    @Entity
     public Secretario(int idSecretario, String sector, Usuario unUsuario, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
         super(dni, nombre, apellido, direccion, telefono, fechaNac);
         this.idSecretario = idSecretario;

@@ -3,15 +3,23 @@ package logica;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Entity;
 
 
 public class Paciente extends Persona{
     
-    private int idPaciente;
     private Boolean tieneOS;
     private String tipoSangre;
     private Responsable unResponsable;
     private List<Turno> listaTurnos;
+    
+    @Entity
+    public Paciente(Boolean tieneOS, String tipoSangre, Responsable unResponsable, List<Turno> listaTurnos) {
+        this.tieneOS = tieneOS;
+        this.tipoSangre = tipoSangre;
+        this.unResponsable = unResponsable;
+        this.listaTurnos = listaTurnos;
+    }
 
     public List<Turno> getListaTurnos() {
         return listaTurnos;
@@ -29,13 +37,6 @@ public class Paciente extends Persona{
         this.unResponsable = unResponsable;
     }
 
-    public int getIdPaciente() {
-        return idPaciente;
-    }
-
-    public void setIdPaciente(int idPaciente) {
-        this.idPaciente = idPaciente;
-    }
 
     public Boolean getTieneOS() {
         return tieneOS;
@@ -52,15 +53,4 @@ public class Paciente extends Persona{
     public void setTipoSangre(String tipoSangre) {
         this.tipoSangre = tipoSangre;
     }
-    
-    
-    public Paciente(int idPaciente, Boolean tieneOS, String tipoSangre, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
-        super(dni, nombre, apellido, direccion, telefono, fechaNac);
-        this.idPaciente = idPaciente;
-        this.tieneOS = tieneOS;
-        this.tipoSangre = tipoSangre;
-    }
-    
-    
-
 }
