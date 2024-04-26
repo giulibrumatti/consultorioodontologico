@@ -2,12 +2,32 @@
 package logica;
 
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
+@Entity
 public class Turno {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int idTurno;
+    @Temporal(TemporalType.DATE)
     private Date fechaTurno;
     private String horaTurno;
     private String afeccion;
+    @ManyToOne
+    @JoinColumn(name="idTurno")
+    private Odontologo odonto;
+    @ManyToOne
+    @JoinColumn(name="idTurno2")
+    private Paciente pacien;
+    
+    
 
     public Turno(int idTurno, Date fechaTurno, String horaTurno, String afeccion) {
         this.idTurno = idTurno;

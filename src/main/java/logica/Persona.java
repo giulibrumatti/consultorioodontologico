@@ -25,8 +25,7 @@ public class Persona {
     @Temporal(TemporalType.DATE)
     private Date fechaNac;
 
-    public Persona(int id, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
-        this.id = id;
+    public Persona(String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;

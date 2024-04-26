@@ -2,30 +2,25 @@
 package logica;
 
 import java.util.Date;
-import javax.persistence.Entity;
 
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Secretario extends Persona{
     
-    private int idSecretario;
     private String sector;
+    @OneToOne
     private Usuario unUsuario;
-    
-    @Entity
-    public Secretario(int idSecretario, String sector, Usuario unUsuario, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
+
+    public Secretario(String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
         super(dni, nombre, apellido, direccion, telefono, fechaNac);
-        this.idSecretario = idSecretario;
-        this.sector = sector;
-        this.unUsuario = unUsuario;
     }
 
-    public int getIdSecretario() {
-        return idSecretario;
+    public Secretario() {
     }
-
-    public void setIdSecretario(int idSecretario) {
-        this.idSecretario = idSecretario;
-    }
-
+    
+  
     public String getSector() {
         return sector;
     }
