@@ -1,6 +1,7 @@
 
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Paciente extends Persona{
+public class Paciente extends Persona implements Serializable{
     
     private Boolean tieneOS;
     private String tipoSangre;
