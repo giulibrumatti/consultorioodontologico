@@ -13,8 +13,8 @@ public class Secretario extends Persona{
     @OneToOne
     private Usuario unUsuario;
 
-    public Secretario(String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
-        super(dni, nombre, apellido, direccion, telefono, fechaNac);
+    public Secretario(int id, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
+        super(id, dni, nombre, apellido, direccion, telefono, fechaNac);
     }
 
     public Secretario() {

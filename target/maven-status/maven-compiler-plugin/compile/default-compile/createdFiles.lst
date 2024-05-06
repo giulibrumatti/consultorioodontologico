@@ -1,2 +1,16 @@
-logica\Persona.class
+logica\Odontologo.class
+logica\Odontologo_.class
+logica\Responsable_.class
+logica\Usuario.class
 logica\Paciente.class
+logica\Persona.class
+logica\Horario.class
+logica\Usuario_.class
+logica\Secretario_.class
+logica\Turno.class
+logica\Persona_.class
+logica\Paciente_.class
+logica\Secretario.class
+logica\Horario_.class
+logica\Responsable.class
+logica\Turno_.class

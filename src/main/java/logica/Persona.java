@@ -26,7 +26,8 @@ public class Persona implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date fechaNac;
 
-    public Persona(String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
+    public Persona(int id, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
+        this.id = id;
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;

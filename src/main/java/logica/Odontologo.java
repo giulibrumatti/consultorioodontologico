@@ -19,8 +19,8 @@ public class Odontologo extends Persona implements Serializable{
     @OneToOne
     private Horario unHorario;
 
-    public Odontologo(String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
-        super(dni, nombre, apellido, direccion, telefono, fechaNac);
+    public Odontologo(String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, int id, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
+        super(id, dni, nombre, apellido, direccion, telefono, fechaNac);
         this.especialidad = especialidad;
         this.listaTurnos = listaTurnos;
         this.unUsuario = unUsuario;

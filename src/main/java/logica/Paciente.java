@@ -19,8 +19,8 @@ public class Paciente extends Persona implements Serializable{
     @OneToMany(mappedBy="pacien")
     private List<Turno> listaTurnos;
 
-    public Paciente(Boolean tieneOS, String tipoSangre, Responsable unResponsable, List<Turno> listaTurnos, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
-        super(dni, nombre, apellido, direccion, telefono, fechaNac);
+    public Paciente(Boolean tieneOS, String tipoSangre, Responsable unResponsable, List<Turno> listaTurnos, int id, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
+        super(id, dni, nombre, apellido, direccion, telefono, fechaNac);
         this.tieneOS = tieneOS;
         this.tipoSangre = tipoSangre;
         this.unResponsable = unResponsable;
