@@ -13,7 +13,7 @@
                 <!-- Main Content -->
                 <div id="content">
                     <%@include file="components/topbar.jsp"%>
-                    <%@include file="components/container.jsp"%>
+                    <%@include file="components/containerAltaOdonto.jsp"%>
                 </div>
                 <%@include file="components/footer.jsp"%>
             </div>

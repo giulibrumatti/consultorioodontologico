@@ -1,12 +1,11 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-            <!-- Main Content -->
-            <div id="content">
-                <%@include file="topbar.jsp"%>
-                <%@include file="title.jsp"%>
-            </div>
-            <%@include file="footer.jsp"%>
-        </div>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Consultorio Odontológico</h1>
+    </div>
+    <h2>Pagina principal</h2>
+</div>
