@@ -21,5 +21,6 @@ public class ControladoraPersistencia {
         usJPA.create(us);
     }
     
+
     
 }

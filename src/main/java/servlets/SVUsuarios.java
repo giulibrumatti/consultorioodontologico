@@ -2,6 +2,8 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,8 +26,11 @@ public class SVUsuarios extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        List<Usuario> listaUsuarios = new ArrayList<Usuario>();
+        
+        listaUsuarios = control.getUsuarios();
     }
+    
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

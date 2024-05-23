@@ -23,5 +23,4 @@
         <%@include file="components/login.jsp"%>
         <%@include file="components/scriptjs.jsp"%>
     </body>
-
 </html>

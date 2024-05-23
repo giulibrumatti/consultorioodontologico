@@ -22,19 +22,21 @@ public class Turno implements Serializable {
     private String horaTurno;
     private String afeccion;
     @ManyToOne
-    @JoinColumn(name="idTurno")
+    @JoinColumn(name="id_odonto")
     private Odontologo odonto;
     @ManyToOne
-    @JoinColumn(name="idTurno2")
+    @JoinColumn(name="id_pacien")
     private Paciente pacien;
-    
-    
 
     public Turno(int idTurno, Date fechaTurno, String horaTurno, String afeccion) {
         this.idTurno = idTurno;
         this.fechaTurno = fechaTurno;
         this.horaTurno = horaTurno;
         this.afeccion = afeccion;
+    }
+    
+    public Turno(){
+        
     }
 
     public int getIdTurno() {

@@ -1,6 +1,7 @@
 
 package logica;
 
+import java.util.ArrayList;
 import persistencia.ControladoraPersistencia;
 
 public class Controladora {
@@ -9,8 +10,17 @@ public class Controladora {
     
     
     public void crearUsuario(int id, String nomUs, String contra, String rol){
-        Usuario us = new Usuario(id, nomUs, contra, rol);
-        controlPersis.crearUsuario(us);
+        Usuario usu = new Usuario();
+        usu.setNombreUsuario(nomUs);
+        usu.setContrasenia(contra);
+        usu.setRol(rol);
+        
+        controlPersis.crearUsuario(usu);
+    }
+    
+    public ArrayList<Usuario> getUsuarios(){
+        ArrayList<Usuario> listaUs = new ArrayList<Usuario>();
+        return listaUs;
     }
 
 }

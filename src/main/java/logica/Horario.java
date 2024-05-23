@@ -20,6 +20,10 @@ public class Horario implements Serializable {
         this.horarioInicio = horarioInicio;
         this.horarioFin = horarioFin;
     }
+    
+    public Horario(){
+        
+    }
 
     public int getIdHorario() {
         return idHorario;
