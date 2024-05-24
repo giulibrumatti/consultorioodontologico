@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Usuario;
 
@@ -29,6 +30,11 @@ public class SVUsuarios extends HttpServlet {
         List<Usuario> listaUsuarios = new ArrayList<Usuario>();
         
         listaUsuarios = control.getUsuarios();
+        HttpSession misession = request.getSession();
+        misession.setAttribute("listaUsuarios", listaUsuarios);
+        System.out.println("Usuario:" + listaUsuarios.get(0));
+        
+        response.sendRedirect("verUsuarios.jsp");
     }
     
 
