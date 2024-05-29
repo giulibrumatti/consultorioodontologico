@@ -2,7 +2,10 @@
 package persistencia;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import logica.Usuario;
+import persistencia.exceptions.NonexistentEntityException;
 
 public class ControladoraPersistencia {
     
@@ -30,6 +33,18 @@ public class ControladoraPersistencia {
 
     public List<Usuario> getUsuarios() {
         return usJPA.findUsuarioEntities();
+    }
+    
+    public void borrarUsuario(int id){
+        try {
+            usJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Usuario traerUsuario(int id) {
+        return usJPA.findUsuario(id);
     }
     
 

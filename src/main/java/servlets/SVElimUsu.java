@@ -37,6 +37,10 @@ public class SVElimUsu extends HttpServlet {
             throws ServletException, IOException {
         
         int id = Integer.parseInt(request.getParameter("id"));
+        
+        control.borrarUsuario(id);
+        
+        response.sendRedirect("index.jsp");
     }
 
     @Override
