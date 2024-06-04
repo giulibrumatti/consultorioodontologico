@@ -11,6 +11,7 @@ logica\Turno_.class
 persistencia\exceptions\PreexistingEntityException.class
 persistencia\ControladoraPersistencia.class
 persistencia\exceptions\IllegalOrphanException.class
+servlets\SVEditUsuarios.class
 persistencia\SecretarioJpaController.class
 logica\Odontologo.class
 logica\Responsable_.class
