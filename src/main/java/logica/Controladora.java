@@ -30,4 +30,8 @@ public class Controladora {
         return controlPersis.traerUsuario(id);
     }
 
+    public void editarUsuario(Usuario us) {
+        controlPersis.editarUsuario(us);
+       
+    }
 }

@@ -43,6 +43,18 @@ public class SVEditUsuarios extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        String nombreUsu = request.getParameter("usuario");
+        String contra = request.getParameter("contra");
+        String rol = request.getParameter("rol");
+        
+        Usuario us = (Usuario) request.getSession().getAttribute("usuEditar");
+        us.setNombreUsuario(nombreUsu);
+        us.setContrasenia(contra);
+        us.setRol(rol);
+        
+        control.editarUsuario(us);
+        
+        response.sendRedirect("SVUsuarios");
     }
 
 

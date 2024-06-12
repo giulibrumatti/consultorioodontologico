@@ -40,7 +40,7 @@ public class SVElimUsu extends HttpServlet {
         
         control.borrarUsuario(id);
         
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("SVUsuarios");
     }
 
     @Override
