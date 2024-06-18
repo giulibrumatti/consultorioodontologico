@@ -8,11 +8,11 @@
     <body id="page-top">
         <!-- Page Wrapper -->
         <div id="wrapper">
-            <%@include file="components/sidebar.jsp"%>
+            <%@include file="components/sidebarmenu.jsp"%>
             <div id="content-wrapper" class="d-flex flex-column">
                 <!-- Main Content -->
                 <div id="content">
-                    <%@include file="components/topbar.jsp"%>
+                    <%@include file="components/topbarusuario.jsp"%>
                     <%@include file="components/containerAltaOdonto.jsp"%>
                 </div>
                 <%@include file="components/footer.jsp"%>
@@ -20,7 +20,6 @@
         </div>
         <!-- End of Page Wrapper -->
         <%@include file="components/icon.jsp"%>
-        <%@include file="components/login.jsp"%>
         <%@include file="components/scriptjs.jsp"%>
     </body>
 

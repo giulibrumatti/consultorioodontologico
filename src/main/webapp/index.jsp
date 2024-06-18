@@ -3,24 +3,29 @@
 <html lang="es">
 
     <!DOCTYPE html>
-    <%@include file="components/head.jsp"%>
+    <%@include file="components/head.jsp"%> 
 
     <body id="page-top">
+        <% HttpSession misession = request.getSession(); 
+           String usuario = (String) request.getSession().getAttribute("usuario");
+           if(usuario == null){
+               response.sendRedirect("sinLogin.jsp");
+            }
+        %>
         <!-- Page Wrapper -->
         <div id="wrapper">
-            <%@include file="components/sidebar.jsp"%>
+            <%@include file="components/sidebarmenu.jsp"%>
             <div id="content-wrapper" class="d-flex flex-column">
                 <!-- Main Content -->
                 <div id="content">
-                    <%@include file="components/topbar.jsp"%>
-                    <%@include file="components/container.jsp"%>
+                    <%@include file="components/topbarusuario.jsp"%>
+                    <%@include file="components/containerIndex.jsp"%>
                 </div>
                 <%@include file="components/footer.jsp"%>
             </div>
         </div>
         <!-- End of Page Wrapper -->
         <%@include file="components/icon.jsp"%>
-        <%@include file="components/login.jsp"%>
         <%@include file="components/scriptjs.jsp"%>
     </body>
 </html>
