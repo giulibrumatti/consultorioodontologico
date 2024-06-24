@@ -1,6 +1,7 @@
 logica\Odontologo_.class
 logica\Usuario.class
 logica\Persona.class
+servlets\SVLogin.class
 logica\Secretario_.class
 logica\Turno.class
 persistencia\UsuarioJpaController.class

@@ -27,7 +27,6 @@
             <button class="btn btn-primary btn-user btn-block" type="submit">
                 Registrar Usuario
             </button>
-        </a>
         <hr>
     </form>
 </div>

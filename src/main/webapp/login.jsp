@@ -24,12 +24,12 @@
                                     <form class="user" action="SVLogin" method="POST">
                                         <div class="form-group">
                                             <input class="form-control form-control-user"
-                                                id="usuario" name="usuario"
+                                                id="user" name="user"
                                                 placeholder="Usuario">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="contrasenia" name="contrasenia" placeholder="Contraseña">
+                                                id="pass" name="pass" placeholder="Contraseña">
                                         </div>
                                         <a href="index.jsp" class="btn btn-primary btn-user btn-block">
                                             Ingresar

@@ -2,7 +2,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,14 +34,14 @@ public class SVLogin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String usuario = request.getParameter("usuario");
-        String contra = request.getParameter("contrasenia");
+        String usuario = request.getParameter("user");
+        String contra = request.getParameter("pass");
         boolean validacion = false;
-        validacion = control.comprobarIngreso(usuario,contra);
+        validacion = control.comprobarIngreso(usuario, contra);
         
         if (validacion){
             HttpSession misession = request.getSession(true);
-            misession.setAttribute("usuario", usuario);
+            misession.setAttribute("user", usuario);
             response.sendRedirect("index.jsp");
         }else{
             response.sendRedirect("loginError.jsp");

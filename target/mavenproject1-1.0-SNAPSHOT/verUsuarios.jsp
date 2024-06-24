@@ -6,7 +6,12 @@
     <%@include file="components/head.jsp"%>
 
     <body id="page-top">
-        <!-- Page Wrapper -->
+        <% HttpSession misession = request.getSession();
+            String usuario = (String) request.getSession().getAttribute("usuario");
+            if (usuario == null) {
+                response.sendRedirect("sinLogin.jsp");
+            }
+        %>
         <div id="wrapper">
             <%@include file="components/sidebarmenu.jsp"%>
             <div id="content-wrapper" class="d-flex flex-column">

@@ -6,6 +6,12 @@
     <%@include file="components/head.jsp"%>
 
     <body id="page-top">
+        <% HttpSession misession = request.getSession();
+            String usuario = (String) request.getSession().getAttribute("usuario");
+            if (usuario == null) {
+                response.sendRedirect("sinLogin.jsp");
+            }
+        %>
         <!-- Page Wrapper -->
         <div id="wrapper">
             <%@include file="components/sidebarmenu.jsp"%>
