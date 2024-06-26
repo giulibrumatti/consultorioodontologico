@@ -51,7 +51,7 @@ public class SVUsuarios extends HttpServlet {
         usu.setContrasenia(contra);
         usu.setRol(rol);
         
-        control.crearUsuario(0, rol, contra, rol);
+        control.crearUsuario(0, usuario, contra, rol);
         
         response.sendRedirect("SVUsuarios");
         

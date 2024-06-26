@@ -6,7 +6,8 @@
     <body id="page-top">
         <% HttpSession misession = request.getSession();
             String usuario = (String) request.getSession().getAttribute("usuario");
-            if (usuario == null) {
+            
+            if(usuario == null){
                 response.sendRedirect("sinLogin.jsp");
             }
         %>

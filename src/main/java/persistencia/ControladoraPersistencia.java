@@ -4,6 +4,7 @@ package persistencia;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import logica.Odontologo;
 import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -29,6 +30,10 @@ public class ControladoraPersistencia {
 
     public void crearUsuario(Usuario us) {
         usJPA.create(us);
+    }
+    
+    public void crearOdontologo(Odontologo odon){
+        odontoJPA.create(odon);
     }
 
     public List<Usuario> getUsuarios() {

@@ -7,7 +7,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Alta Odontológos</h1>
     </div>
-    <form class="user">
+    <form class="user" action="SVOdontologos" method="POST">
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="nombre"
@@ -34,7 +34,7 @@
                        placeholder="Dirección">
             </div>
             <div class="col-sm-6">
-                <input type="text" class="form-control form-control-user" id="fechanac"
+                <input type="date" class="form-control form-control-user" id="fechanac"
                        placeholder="Fecha de nacimiento">
             </div>
         </div>
@@ -44,9 +44,9 @@
                        placeholder="Especialidad">
             </div>
         </div>
-        <a href="" class="btn btn-primary btn-user btn-block">
+            <button class="btn btn-primary btn-user btn-block" type="submit">
                 Registrar Odontológo
-        </a>
+            </button>
         <hr>
     </form>
 </div>
