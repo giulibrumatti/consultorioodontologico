@@ -4,6 +4,7 @@ package persistencia;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import logica.Horario;
 import logica.Odontologo;
 import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
@@ -35,9 +36,17 @@ public class ControladoraPersistencia {
     public void crearOdontologo(Odontologo odon){
         odontoJPA.create(odon);
     }
+    
+    public void crearHorario(Horario hora){
+        horaJPA.create(hora);
+    }
 
     public List<Usuario> getUsuarios() {
         return usJPA.findUsuarioEntities();
+    }
+    
+    public List<Odontologo> getOdontologos() {
+        return odontoJPA.findOdontologoEntities();
     }
     
     public void borrarUsuario(int id){

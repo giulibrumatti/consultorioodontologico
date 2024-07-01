@@ -20,6 +20,14 @@ public class Controladora {
         controlPersis.crearUsuario(usu);
     }
     
+    public void crearHorario(int id, String horarioInicio, String horarioFin){
+        Horario hora = new Horario();
+        hora.setHorarioInicio(horarioInicio);
+        hora.setHorarioFin(horarioFin);
+      
+        controlPersis.crearHorario(hora);
+    }
+    
     public void crearOdontologo(int id, String nombre, String apellido, String dni, String tel, String direccion, Date fechaNac, String especialidad){
         Odontologo odon = new Odontologo();
         odon.setNombre(nombre);
@@ -31,6 +39,10 @@ public class Controladora {
         odon.setEspecialidad(especialidad);
         
         controlPersis.crearOdontologo(odon);
+    }
+    
+    public List<Odontologo> getOdontologos(){
+        return controlPersis.getOdontologos();
     }
     
     public List<Usuario> getUsuarios(){

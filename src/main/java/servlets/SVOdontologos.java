@@ -5,11 +5,11 @@
 package servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -17,8 +17,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.Controladora;
+import logica.Horario;
 import logica.Odontologo;
+import logica.Usuario;
 
 @WebServlet(name = "SVOdontologos", urlPatterns = {"/SVOdontologos"})
 public class SVOdontologos extends HttpServlet {
@@ -33,7 +36,14 @@ public class SVOdontologos extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        List<Odontologo> listaOdon = new ArrayList<Odontologo>();
+        
+        listaOdon = control.getOdontologos();
+        HttpSession misession = request.getSession();
+        misession.setAttribute("listaOdon", listaOdon);
+        
+        response.sendRedirect("verOdontologo.jsp");
     }
 
     @Override
@@ -45,15 +55,23 @@ public class SVOdontologos extends HttpServlet {
             String fecha = request.getParameter("fechanac");
             Date fechaNac = formatoDate.parse(fecha);
             
-            
             String nombre = request.getParameter("nombre");
             String apellido = request.getParameter("apellido");
             String dni = request.getParameter("dni");
             String tel = request.getParameter("tel");
             String direccion = request.getParameter("direccion");
             String especialidad = request.getParameter("especialidad");
+            String horarioinicio = request.getParameter("horarioinicio");
+            String horariofin = request.getParameter("horariofin");
             
             Odontologo odon = new Odontologo();
+            Usuario us = new Usuario();
+            Horario hora = new Horario();
+            us.setNombreUsuario(apellido);
+            us.setContrasenia(dni);
+            us.setRol(especialidad);
+            hora.setHorarioInicio(horarioinicio);
+            hora.setHorarioFin(horariofin);
             odon.setNombre(nombre);
             odon.setApellido(apellido);
             odon.setDni(dni);
@@ -61,11 +79,16 @@ public class SVOdontologos extends HttpServlet {
             odon.setDireccion(direccion);
             odon.setFechaNac(fechaNac);
             odon.setEspecialidad(especialidad);
+            odon.setUnUsuario(us);
+            odon.setUnHorario(hora);
+            
             control.crearOdontologo(0, nombre, apellido, dni, tel, direccion, fechaNac, especialidad);
+            control.crearUsuario(0, apellido, dni, especialidad);
+            control.crearHorario(0,horarioinicio,horariofin);
         } catch (ParseException ex) {
             Logger.getLogger(SVOdontologos.class.getName()).log(Level.SEVERE, null, ex);
         }
-        response.sendRedirect("SVUsuarios");
+        response.sendRedirect("SVOdontologos");
     }
 
 

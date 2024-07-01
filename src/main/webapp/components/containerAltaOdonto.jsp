@@ -25,7 +25,7 @@
             </div>
             <div class="col-sm-6">
                 <input type="text" class="form-control form-control-user" id="tel"
-                       placeholder="Telefono">
+                       placeholder="Teléfono">
             </div>
         </div>
         <div class="form-group row">
@@ -34,8 +34,18 @@
                        placeholder="Dirección">
             </div>
             <div class="col-sm-6">
-                <input type="date" class="form-control form-control-user" id="fechanac"
+                <input type="text" class="form-control form-control-user" id="fechanac"
                        placeholder="Fecha de nacimiento">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="text" class="form-control form-control-user" id="horarioinicio"
+                       placeholder="Horario inicio">
+            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="text" class="form-control form-control-user" id="horariofin"
+                       placeholder="Horario fin">
             </div>
         </div>
         <div class="form-group row">
