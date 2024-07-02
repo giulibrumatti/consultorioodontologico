@@ -1,5 +1,5 @@
-
-
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Date" %>
 <%@page import="logica.Odontologo"%>
 <%@page import="logica.Usuario"%>
 <%@page import="java.util.List"%>
@@ -27,41 +27,28 @@
                                 <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Especialidad</th>
-                                <th>Usuario</th>
-                                <th>Horario</th>
-                                <th>DatosPersonales</th>
-                                <th style="width:210px">Acción</th>
+                                <th>DNI</th>
+                                <th>Tel</th>
+                                <th>Dirección</th>
+                                <th>Fecha Nacimiento</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Especialidad</th>
-                                <th>Usuario</th>
-                                <th>Horario</th>
-                                <th>DatosPersonales</th>
-                                <th style="width:210px">Acción</th>
-                            </tr>
-                        </tfoot>
                         <%
                             List<Odontologo> listaOdon = (List) request.getSession().getAttribute("listaOdon");
+                            SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
+                            for (Odontologo odon : listaOdon) {
+                                
                         %>
-                        <tbody>
-                            <% for (Odontologo odon : listaOdon) {%>
+                        <tbody>                               
                             <tr>
                                 <td id="idOdontologo<%=odon.getId()%>"> <%= odon.getId()%> </td>
                                 <td> <%= odon.getNombre()%> </td>
                                 <td> <%= odon.getApellido()%> </td>
-                                <td> <%= odon.getEspecialidad()%><td>
-                                <td> <%= odon.getUnUsuario()%><td>
-                                <td> <%= odon.getUnHorario()%><td>
-                                <td> <%= odon.getDni()%><p>/</p>
-                                     <%= odon.getTelefono()%><p>/</p>
-                                     <%= odon.getDireccion()%><p>/</p>
-                                     <%= odon.getFechaNac()%>
-                                </td>
+                                <td> <%= odon.getEspecialidad()%></td>
+                                <td> <%= odon.getDni()%></td>
+                                <td> <%= odon.getTelefono()%></td>
+                                <td> <%= odon.getDireccion()%></td>
+                                <td> <%= odon.getFechaNac()%></td>
                             </tr>
                             <%}%>
                         </tbody>

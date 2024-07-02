@@ -11,47 +11,47 @@
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="nombre"
-                       placeholder="Nombre">
+                       name="nombre" placeholder="Nombre">
             </div>
             <div class="col-sm-6">
                 <input type="text" class="form-control form-control-user" id="apellido"
-                       placeholder="Apellido">
+                       name="apellido" placeholder="Apellido">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="dni"
-                       placeholder="DNI">
+                       name="dni" placeholder="DNI">
             </div>
             <div class="col-sm-6">
                 <input type="text" class="form-control form-control-user" id="tel"
-                       placeholder="Teléfono">
+                       name="tel" placeholder="Teléfono">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="direccion"
-                       placeholder="Dirección">
+                       name="direccion" placeholder="Dirección">
             </div>
             <div class="col-sm-6">
-                <input type="text" class="form-control form-control-user" id="fechanac"
-                       placeholder="Fecha de nacimiento">
+                <input type="date" class="form-control form-control-user" id="fechanac"
+                       name="fechanac" placeholder="Fecha de nacimiento">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="horarioinicio"
-                       placeholder="Horario inicio">
+                       name="horarioinicio" placeholder="Horario inicio">
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="horariofin"
-                       placeholder="Horario fin">
+                       name="horariofin" placeholder="Horario fin">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="especialidad"
-                       placeholder="Especialidad">
+                       name="especialidad" placeholder="Especialidad">
             </div>
         </div>
             <button class="btn btn-primary btn-user btn-block" type="submit">

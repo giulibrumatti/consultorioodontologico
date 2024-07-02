@@ -24,12 +24,12 @@
                                     <form class="user" action="SVLogin" method="POST">
                                         <div class="form-group">
                                             <input class="form-control form-control-user"
-                                                id="usuario" name="usuario"
+                                                id="userlogin" name="userlogin"
                                                 placeholder="Usuario">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="contrasenia" name="contrasenia" placeholder="Contraseña">
+                                                id="passlogin" name="passlogin" placeholder="Contraseña">
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Ingresar

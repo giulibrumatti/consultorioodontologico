@@ -26,7 +26,6 @@ public class SVLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
     }
 
 
@@ -34,15 +33,15 @@ public class SVLogin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String usuario = request.getParameter("usuario");
-        String contra = request.getParameter("contrasenia");
+        String usuario = request.getParameter("userlogin");
+        String contra = request.getParameter("passlogin");
         
         boolean validacion = false;
         validacion = control.comprobarIngreso(usuario, contra);
         
         if (validacion == true){
             HttpSession misession = request.getSession(true);
-            misession.setAttribute("usuario", usuario);
+            misession.setAttribute("userlogin", usuario);
             response.sendRedirect("index.jsp");
         }else{
             response.sendRedirect("loginError.jsp");

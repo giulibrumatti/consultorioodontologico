@@ -10,8 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -50,10 +48,6 @@ public class SVOdontologos extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        //SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
-        //String fecha = request.getParameter("fechanac");
-        Date fechaNac = new Date();
-
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String dni = request.getParameter("dni");
@@ -62,15 +56,28 @@ public class SVOdontologos extends HttpServlet {
         String especialidad = request.getParameter("especialidad");
         String horarioinicio = request.getParameter("horarioinicio");
         String horariofin = request.getParameter("horariofin");
+        
+        // Convertir fecha
+        SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
+        String fecha = request.getParameter("fechanac");
+        Date fechaNac = null;
+        try {
+            fechaNac = formatoDate.parse(fecha);
+        } catch (ParseException e) {
+        }
 
+        // Crear objetos y asignar valores
         Odontologo odon = new Odontologo();
         Usuario us = new Usuario();
         Horario hora = new Horario();
+        
         us.setNombreUsuario(apellido);
         us.setContrasenia(dni);
         us.setRol(especialidad);
+        
         hora.setHorarioInicio(horarioinicio);
         hora.setHorarioFin(horariofin);
+        
         odon.setNombre(nombre);
         odon.setApellido(apellido);
         odon.setDni(dni);
@@ -81,9 +88,12 @@ public class SVOdontologos extends HttpServlet {
         odon.setUnUsuario(us);
         odon.setUnHorario(hora);
 
+        // Llamadas al controlador
         control.crearOdontologo(0, nombre, apellido, dni, tel, direccion, fechaNac, especialidad);
         control.crearUsuario(0, apellido, dni, especialidad);
         control.crearHorario(0, horarioinicio, horariofin);
+
+        // Redireccionar
         response.sendRedirect("SVOdontologos");
     }
 

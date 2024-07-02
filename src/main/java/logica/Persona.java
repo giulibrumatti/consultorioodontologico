@@ -88,6 +88,7 @@ public class Persona implements Serializable {
     }
 
     public Date getFechaNac() {
+        
         return fechaNac;
     }
 
