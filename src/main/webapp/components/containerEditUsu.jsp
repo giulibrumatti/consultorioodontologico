@@ -29,7 +29,7 @@
             <button class="btn btn-primary btn-user btn-block" type="submit">
                 Guardar edición
             </button>
-        </a>
+       
         <hr>
     </form>
 </div>

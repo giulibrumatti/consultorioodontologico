@@ -67,17 +67,16 @@ public class SVOdontologos extends HttpServlet {
         }
 
         // Crear objetos y asignar valores
-        Odontologo odon = new Odontologo();
         Usuario us = new Usuario();
-        Horario hora = new Horario();
-        
         us.setNombreUsuario(apellido);
         us.setContrasenia(dni);
         us.setRol(especialidad);
         
+        Horario hora = new Horario();
         hora.setHorarioInicio(horarioinicio);
         hora.setHorarioFin(horariofin);
         
+        Odontologo odon = new Odontologo();
         odon.setNombre(nombre);
         odon.setApellido(apellido);
         odon.setDni(dni);
@@ -89,9 +88,7 @@ public class SVOdontologos extends HttpServlet {
         odon.setUnHorario(hora);
 
         // Llamadas al controlador
-        control.crearOdontologo(0, nombre, apellido, dni, tel, direccion, fechaNac, especialidad);
-        control.crearUsuario(0, apellido, dni, especialidad);
-        control.crearHorario(0, horarioinicio, horariofin);
+        control.crearOdontologo(0, nombre, apellido, dni, tel, direccion, fechaNac, especialidad, horarioinicio,horariofin);
 
         // Redireccionar
         response.sendRedirect("SVOdontologos");

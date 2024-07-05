@@ -31,13 +31,18 @@
                                 <th>Tel</th>
                                 <th>Dirección</th>
                                 <th>Fecha Nacimiento</th>
+                                <th>Horario</th>
+                                <th>Usuario</th>
+                                <th style="width:210px">Acción</th>
                             </tr>
                         </thead>
                         <%
                             List<Odontologo> listaOdon = (List) request.getSession().getAttribute("listaOdon");
                             SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
                             for (Odontologo odon : listaOdon) {
-                                
+                                String fechaFormateada = (odon.getFechaNac() != null) ? formatoDate.format(odon.getFechaNac()) : "Fecha no disponible";
+                                String horario = (odon.obtenerHorario() != null) ? odon.obtenerHorario() : "Horario no disponible";
+                                String nombreUsuario = (odon.obtenerUsuario() != null) ? odon.obtenerUsuario() : "Usuario no disponible";
                         %>
                         <tbody>                               
                             <tr>
@@ -48,7 +53,25 @@
                                 <td> <%= odon.getDni()%></td>
                                 <td> <%= odon.getTelefono()%></td>
                                 <td> <%= odon.getDireccion()%></td>
-                                <td> <%= odon.getFechaNac()%></td>
+                                <td> <%= fechaFormateada %></td>
+                                <td> <%= horario %></td>
+                                <td> <%= nombreUsuario %></td>
+                                <td style="display: flex; width:230px">
+                                    <form name="eliminar" action="SVElimOdonto" method="POST">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="border-color:red; background-color:red; margin-right: 5px;">
+                                            <i class="fas fa-trash-alt"></i> Eliminar
+                                        </button>
+                                        <input type="hidden" name="idOdonto" value="<%=odon.getId()%>">
+                                        <input type="hidden" name="idUsuario" value="<%=odon.getUnUsuario().getIdUsuario()%>">
+                                    </form>
+                                    <form name="editar" action="SVEditOdonto" method="GET">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
+                                            <i class="fas fa-pencil-alt"></i> Editar
+                                        </button>
+                                        <input type="hidden" name="idOdonto" value="<%=odon.getId()%>">
+                                        <input type="hidden" name="idUsuario" value="<%=odon.getUnUsuario().getIdUsuario()%>">
+                                    </form>
+                                </td>
                             </tr>
                             <%}%>
                         </tbody>

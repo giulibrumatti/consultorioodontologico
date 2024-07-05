@@ -2,6 +2,7 @@
 package logica;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -88,7 +89,6 @@ public class Persona implements Serializable {
     }
 
     public Date getFechaNac() {
-        
         return fechaNac;
     }
 

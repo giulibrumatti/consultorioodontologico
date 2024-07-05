@@ -28,7 +28,18 @@ public class Controladora {
         controlPersis.crearHorario(hora);
     }
     
-    public void crearOdontologo(int id, String nombre, String apellido, String dni, String tel, String direccion, Date fechaNac, String especialidad){
+    public void crearOdontologo(int id, String nombre, String apellido, String dni, String tel, String direccion, 
+            Date fechaNac, String especialidad, String horarioinicio, String horariofin){
+        
+        Usuario us = new Usuario();
+        us.setNombreUsuario(nombre);
+        us.setContrasenia(apellido);
+        us.setRol(especialidad);
+        
+        Horario hora = new Horario();
+        hora.setHorarioInicio(horarioinicio);
+        hora.setHorarioFin(horariofin);
+        
         Odontologo odon = new Odontologo();
         odon.setNombre(nombre);
         odon.setApellido(apellido);
@@ -37,6 +48,8 @@ public class Controladora {
         odon.setDireccion(direccion);
         odon.setFechaNac(fechaNac);
         odon.setEspecialidad(especialidad);
+        odon.setUnUsuario(us);
+        odon.setUnHorario(hora);
         
         controlPersis.crearOdontologo(odon);
     }
@@ -52,9 +65,17 @@ public class Controladora {
     public void borrarUsuario(int id){
         controlPersis.borrarUsuario(id);
     }
+    
+    public void borrarOdonto(int id){
+        controlPersis.borrarOdonto(id);
+    }
 
     public Usuario traerUsuario(int id) {
         return controlPersis.traerUsuario(id);
+    }
+    
+    public Odontologo traerOdontologo(int id) {
+        return controlPersis.traerOdontologo(id);
     }
 
     public void editarUsuario(Usuario us) {

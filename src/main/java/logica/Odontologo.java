@@ -4,6 +4,7 @@ package logica;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -14,9 +15,9 @@ public class Odontologo extends Persona implements Serializable{
     private String especialidad;
     @OneToMany(mappedBy="odonto")
     private List<Turno> listaTurnos;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Usuario unUsuario;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Horario unHorario;
 
     public Odontologo(String especialidad, List<Turno> listaTurnos, Usuario unUsuario, Horario unHorario, int id, String dni, String nombre, String apellido, String direccion, String telefono, Date fechaNac) {
@@ -49,6 +50,14 @@ public class Odontologo extends Persona implements Serializable{
 
     public Horario getUnHorario() {
         return unHorario;
+    }
+    
+    public String obtenerHorario(){
+        return unHorario.getHorarioInicio()+ "-" + unHorario.getHorarioFin();
+    }
+    
+    public String obtenerUsuario(){
+        return unUsuario.getNombreUsuario();
     }
 
     public void setUnHorario(Horario unHorario) {
