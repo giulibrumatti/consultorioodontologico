@@ -1,5 +1,7 @@
+servlets\SVElimOdonto.class
 logica\Odontologo_.class
 logica\Usuario.class
+servlets\SVEditOdonto.class
 logica\Persona.class
 servlets\SVLogin.class
 logica\Secretario_.class

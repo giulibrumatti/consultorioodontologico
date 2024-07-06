@@ -12,12 +12,14 @@ C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Persona.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\ResponsableJpaController.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Odontologo.java
+C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\servlets\SVEditOdonto.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\PacienteJpaController.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\exceptions\NonexistentEntityException.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\OdontologoJpaController.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\ControladoraPersistencia.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\exceptions\IllegalOrphanException.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Turno.java
+C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\servlets\SVElimOdonto.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Secretario.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\SecretarioJpaController.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\exceptions\PreexistingEntityException.java

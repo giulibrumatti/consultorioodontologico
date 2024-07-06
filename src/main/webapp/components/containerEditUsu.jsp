@@ -12,16 +12,19 @@
     <form class="user" action="SVEditUsuarios" method="POST">
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="usuario" class="text-gray-600 small" >Nombre de Usuario</label>
                 <input type="text" class="form-control form-control-user" name="usuario" id="usuario"
                        placeholder="Usuario" value="<%=us.getNombreUsuario()%>">
             </div>
             <div class="col-sm-6">
+                <label for="contra" class="text-gray-600 small" >Contraseña</label>
                 <input type="password" class="form-control form-control-user" name="contra" id="contra"
                        placeholder="Contraseña" value="<%=us.getContrasenia()%>" >              
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="rol" class="text-gray-600 small" >Rol</label>
                 <input type="text" class="form-control form-control-user" name="rol" id="rol"
                        placeholder="Rol" value="<%=us.getRol()%>">
             </div>

@@ -47,15 +47,15 @@
                                 <td> <%= usu.getRol()%> </td>
 
                                 <td style="display: flex; width:230px">
-                                    <form name="eliminar" action="SVElimUsu" method="POST">
-                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="border-color:red; background-color:red; margin-right: 5px;">
-                                            <i class="fas fa-trash-alt"></i> Eliminar
+                                    <form name="editar" action="SVEditUsuarios" method="GET">
+                                        <button type="submit" class="btn btn-primary btn-circle btn-block m-1" style="margin-left: 5px;">
+                                            <i class="fas fa-pencil-alt"></i>
                                         </button>
                                         <input type="hidden" name="id" value="<%=usu.getIdUsuario()%>">
                                     </form>
-                                    <form name="editar" action="SVEditUsuarios" method="GET">
-                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
-                                            <i class="fas fa-pencil-alt"></i> Editar
+                                    <form name="eliminar" action="SVElimUsu" method="POST">
+                                        <button type="submit" class="btn btn-danger btn-circle m-1" style="border-color:red; background-color:red; margin-right: 5px;">
+                                            <i class="fas fa-trash"></i>
                                         </button>
                                         <input type="hidden" name="id" value="<%=usu.getIdUsuario()%>">
                                     </form>
