@@ -98,4 +98,12 @@ public class Controladora {
         return ingreso;
         
     }
+
+    public void editarOdontologo(Odontologo odon) {
+        controlPersis.editarOdontologo(odon);
+    }
+
+    public void editarHorario(Horario unHorario) {
+        controlPersis.editarHorario(unHorario);
+    }
 }

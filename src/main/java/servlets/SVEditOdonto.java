@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import logica.Controladora;
+import logica.Horario;
 import logica.Odontologo;
 import logica.Usuario;
 
@@ -50,7 +51,6 @@ public class SVEditOdonto extends HttpServlet {
         String especialidad = request.getParameter("especialidad");
         String horarioinicio = request.getParameter("horarioinicio");
         String horariofin = request.getParameter("horariofin");
-        String nombreUsu = request.getParameter("nomUsuario");
         
         SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
         String fecha = request.getParameter("fechanac");
@@ -60,10 +60,18 @@ public class SVEditOdonto extends HttpServlet {
         } catch (ParseException e) {
         }
         
-        Usuario us = (Usuario) request.getSession().getAttribute("odontoEditar");
-        us.setNombreUsuario(nombreUsu);
+        Odontologo odon = (Odontologo) request.getSession().getAttribute("odontoEditar");
+        odon.setNombre(nombre);
+        odon.setApellido(apellido);
+        odon.setEspecialidad(especialidad);
+        odon.setDni(dni);
+        odon.setDireccion(direccion);
+        odon.setTelefono(tel);
+        odon.getUnHorario().setHorarioInicio(horarioinicio);
+        odon.getUnHorario().setHorarioInicio(horariofin);
+        odon.setFechaNac(fechaNac);
         
-        control.editarUsuario(us);
+        control.editarOdontologo(odon);
         
         response.sendRedirect("SVOdontologos");
     }

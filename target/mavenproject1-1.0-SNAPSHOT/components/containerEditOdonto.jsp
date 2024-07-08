@@ -10,7 +10,7 @@
         <h1 class="h3 mb-0 text-gray-800">Edición de Odontólogos</h1>
     </div>
     <% Odontologo odonto = (Odontologo) request.getSession().getAttribute("odontoEditar");%>
-    <form class="user" action="SVEditUsuarios" method="POST">
+    <form class="user" action="SVEditOdonto" method="POST">
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="nombre" class="text-gray-600 small" >Nombre</label>
@@ -60,11 +60,6 @@
             </div>
         </div>
         <div class="form-group row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-                <label for="nomUsuario" class="text-gray-600 small" >Nombre de Usuario</label>
-                <input type="text" class="form-control form-control-user" name="nomUsuario" id="nomUsuario"
-                       placeholder="Nombre de Usuario" value="<%=odonto.getUnUsuario().getNombreUsuario()%>">
-            </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="especialidad" class="text-gray-600 small" >Especialidad</label>
                 <input type="text" class="form-control form-control-user" name="especialidad" id="especialidad"
