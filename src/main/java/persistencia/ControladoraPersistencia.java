@@ -72,6 +72,10 @@ public class ControladoraPersistencia {
     public Odontologo traerOdontologo(int id) {
         return odontoJPA.findOdontologo(id);
     }
+    
+    public Horario traerHorario(int id) {
+        return horaJPA.findHorario(id);
+    }
 
     public void editarUsuario(Usuario us) {
         try {

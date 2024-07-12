@@ -69,7 +69,7 @@
                                             <i class="fas fa-trash"></i>
                                         </button>
                                         <input type="hidden" name="idOdonto" value="<%=odon.getId()%>">
-                                        <input type="hidden" name="idUsuario" value="<%=odon.getUnUsuario().getIdUsuario()%>">
+                                        <input type="hidden" name="idHorario" value="<%=odon.getUnHorario().getIdHorario()%>">
                                     </form>
                                 </td>
                             </tr>

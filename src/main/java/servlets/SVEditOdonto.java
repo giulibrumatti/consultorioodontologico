@@ -30,6 +30,7 @@ public class SVEditOdonto extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int idOdonto = Integer.parseInt(request.getParameter("idOdonto"));
+        
         Odontologo odonto = control.traerOdontologo(idOdonto);
         
         HttpSession misession = request.getSession();
@@ -61,17 +62,22 @@ public class SVEditOdonto extends HttpServlet {
         }
         
         Odontologo odon = (Odontologo) request.getSession().getAttribute("odontoEditar");
+        Horario hora = (Horario) request.getSession().getAttribute("odontoEditar");
+        
+        hora.setHorarioInicio(horarioinicio);
+        hora.setHorarioFin(horariofin);
+        
         odon.setNombre(nombre);
         odon.setApellido(apellido);
         odon.setEspecialidad(especialidad);
         odon.setDni(dni);
         odon.setDireccion(direccion);
         odon.setTelefono(tel);
-        odon.getUnHorario().setHorarioInicio(horarioinicio);
-        odon.getUnHorario().setHorarioInicio(horariofin);
+        odon.setUnHorario(hora);
         odon.setFechaNac(fechaNac);
         
         control.editarOdontologo(odon);
+        control.editarHorario(hora);
         
         response.sendRedirect("SVOdontologos");
     }

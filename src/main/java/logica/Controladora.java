@@ -77,6 +77,10 @@ public class Controladora {
     public Odontologo traerOdontologo(int id) {
         return controlPersis.traerOdontologo(id);
     }
+    
+    public Horario traerHorario(int id) {
+        return controlPersis.traerHorario(id);
+    }
 
     public void editarUsuario(Usuario us) {
         controlPersis.editarUsuario(us);
