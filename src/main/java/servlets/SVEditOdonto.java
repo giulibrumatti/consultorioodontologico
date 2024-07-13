@@ -62,8 +62,8 @@ public class SVEditOdonto extends HttpServlet {
         }
         
         Odontologo odon = (Odontologo) request.getSession().getAttribute("odontoEditar");
-        Horario hora = (Horario) request.getSession().getAttribute("odontoEditar");
-        
+        Horario hora = control.traerHorario(odon.getUnHorario().getIdHorario());
+
         hora.setHorarioInicio(horarioinicio);
         hora.setHorarioFin(horariofin);
         
