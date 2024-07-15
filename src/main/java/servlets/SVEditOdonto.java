@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Horario;
 import logica.Odontologo;
-import logica.Usuario;
 
 @WebServlet(name = "SVEditOdonto", urlPatterns = {"/SVEditOdonto"})
 public class SVEditOdonto extends HttpServlet {
@@ -63,10 +62,13 @@ public class SVEditOdonto extends HttpServlet {
         
         Odontologo odon = (Odontologo) request.getSession().getAttribute("odontoEditar");
         Horario hora = control.traerHorario(odon.getUnHorario().getIdHorario());
-
-        hora.setHorarioInicio(horarioinicio);
-        hora.setHorarioFin(horariofin);
-        
+        System.out.println(hora);
+        if (hora != null) {
+            System.out.println("Horario antes de la edición: " + hora.getHorarioInicio()+ "-" + hora.getHorarioFin());
+            hora.setHorarioInicio(horarioinicio);
+            hora.setHorarioFin(horariofin);
+            System.out.println("Horario después de la edición: " + hora.getHorarioInicio()+ "-" + hora.getHorarioFin());
+        }
         odon.setNombre(nombre);
         odon.setApellido(apellido);
         odon.setEspecialidad(especialidad);
