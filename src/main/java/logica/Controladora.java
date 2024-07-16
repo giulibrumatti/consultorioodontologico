@@ -105,6 +105,7 @@ public class Controladora {
 
     public void editarOdontologo(Odontologo odon) {
         controlPersis.editarOdontologo(odon);
+        controlPersis.editarHorario(odon.getUnHorario());
     }
 
     public void editarHorario(Horario unHorario) {

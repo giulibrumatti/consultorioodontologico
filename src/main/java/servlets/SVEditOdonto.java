@@ -31,7 +31,6 @@ public class SVEditOdonto extends HttpServlet {
         int idOdonto = Integer.parseInt(request.getParameter("idOdonto"));
         
         Odontologo odonto = control.traerOdontologo(idOdonto);
-        
         HttpSession misession = request.getSession();
         misession.setAttribute("odontoEditar", odonto);
         
@@ -49,11 +48,12 @@ public class SVEditOdonto extends HttpServlet {
         String tel = request.getParameter("tel");
         String direccion = request.getParameter("direccion");
         String especialidad = request.getParameter("especialidad");
-        String horarioinicio = request.getParameter("horarioinicio");
-        String horariofin = request.getParameter("horariofin");
+        String horarioinicio = request.getParameter("horarioInicio");
+        String horariofin = request.getParameter("horarioFin");
+        String fechaNacStr = request.getParameter("fechanac");
         
-        SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
-        String fecha = request.getParameter("fechanac");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String fechaNacStr = sdf.format(fechanac);
         Date fechaNac = null;
         try {
             fechaNac = formatoDate.parse(fecha);
@@ -61,14 +61,12 @@ public class SVEditOdonto extends HttpServlet {
         }
         
         Odontologo odon = (Odontologo) request.getSession().getAttribute("odontoEditar");
-        Horario hora = control.traerHorario(odon.getUnHorario().getIdHorario());
+        Horario hora = odon.getUnHorario();
         System.out.println(hora);
-        if (hora != null) {
-            System.out.println("Horario antes de la edición: " + hora.getHorarioInicio()+ "-" + hora.getHorarioFin());
-            hora.setHorarioInicio(horarioinicio);
-            hora.setHorarioFin(horariofin);
-            System.out.println("Horario después de la edición: " + hora.getHorarioInicio()+ "-" + hora.getHorarioFin());
-        }
+        System.out.println("Horario antes de la edición: " + hora.getHorarioInicio()+ "-" + hora.getHorarioFin());
+        hora.setHorarioInicio(horarioinicio);
+        hora.setHorarioFin(horariofin);
+        System.out.println("Horario después de la edición: " + hora.getHorarioInicio()+ "-" + hora.getHorarioFin());
         odon.setNombre(nombre);
         odon.setApellido(apellido);
         odon.setEspecialidad(especialidad);
@@ -79,7 +77,6 @@ public class SVEditOdonto extends HttpServlet {
         odon.setFechaNac(fechaNac);
         
         control.editarOdontologo(odon);
-        control.editarHorario(hora);
         
         response.sendRedirect("SVOdontologos");
     }

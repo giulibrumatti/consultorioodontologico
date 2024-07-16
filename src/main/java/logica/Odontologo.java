@@ -2,6 +2,7 @@
 package logica;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -72,6 +73,10 @@ public class Odontologo extends Persona implements Serializable{
         this.especialidad = especialidad;
     }
     
+    public String obtenerFechaNac() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); // Formato deseado
+        return sdf.format(this.getFechaNac());
+    }
 
     
 }

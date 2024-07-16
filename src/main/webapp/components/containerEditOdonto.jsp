@@ -1,5 +1,6 @@
 
 
+<%@page import="logica.Horario"%>
 <%@page import="logica.Odontologo"%>
 <%@page import="logica.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -42,10 +43,10 @@
                        placeholder="Dirección" value="<%=odonto.getDireccion()%>">
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <label for="fechanac" class="text-gray-600 small" >Fecha Nacimiento: <%=odonto.getFechaNac()%></label>
-                <input type="date" class="form-control form-control-user" name="fechanac" id="fechanac"
-                       placeholder="Fecha Nacimiento">
-            </div>
+                
+                <label for="fechanac" class="text-gray-600 small" >Fecha Nacimiento </label>
+                <input type="date" class="form-control form-control-user" name="fechanac" id="fechanac">
+            </div> 
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
