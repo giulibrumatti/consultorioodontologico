@@ -62,7 +62,6 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                         <input type="hidden" name="idOdonto" value="<%=odon.getId()%>">
-                                        <input type="hidden" name="idUsuario" value="<%=odon.getUnUsuario().getIdUsuario()%>">
                                     </form>
                                     <form name="eliminar" action="SVElimOdonto" method="POST">
                                         <button type="submit" class="btn btn-danger btn-circle m-1" style="border-color:red; background-color:red; margin-right: 5px;">
@@ -70,6 +69,7 @@
                                         </button>
                                         <input type="hidden" name="idOdonto" value="<%=odon.getId()%>">
                                         <input type="hidden" name="idHorario" value="<%=odon.getUnHorario().getIdHorario()%>">
+                                        <input type="hidden" name="idUsuario" value="<%=odon.getUnUsuario().getIdUsuario()%>">
                                     </form>
                                 </td>
                             </tr>

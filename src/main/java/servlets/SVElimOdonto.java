@@ -32,8 +32,10 @@ public class SVElimOdonto extends HttpServlet {
         
         int idOdonto = Integer.parseInt(request.getParameter("idOdonto"));
         int idUs = Integer.parseInt(request.getParameter("idUsuario"));
+        int idHora = Integer.parseInt(request.getParameter("idHorario"));
         
         control.borrarUsuario(idUs);
+        control.borrarHorario(idHora);
         control.borrarOdonto(idOdonto);
         
         response.sendRedirect("SVOdontologos");

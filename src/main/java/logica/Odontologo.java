@@ -54,7 +54,7 @@ public class Odontologo extends Persona implements Serializable{
     }
     
     public String obtenerHorario(){
-        return unHorario.getHorarioInicio()+ "-" + unHorario.getHorarioFin();
+        return unHorario.getHorarioInicio()+ " a " + unHorario.getHorarioFin();
     }
     
     public String obtenerUsuario(){

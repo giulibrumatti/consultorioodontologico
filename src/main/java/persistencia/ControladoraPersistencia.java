@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import logica.Horario;
 import logica.Odontologo;
+import logica.Paciente;
 import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -49,6 +50,10 @@ public class ControladoraPersistencia {
         return odontoJPA.findOdontologoEntities();
     }
     
+    public List<Paciente> getPacientes() {
+        return pacienteJPA.findPacienteEntities();
+    }
+    
     public void borrarUsuario(int id){
         try {
             usJPA.destroy(id);
@@ -64,6 +69,15 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public void borrarHorario(int id){
+        try {
+            horaJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 
     public Usuario traerUsuario(int id) {
         return usJPA.findUsuario(id);

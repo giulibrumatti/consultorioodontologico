@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,20 +55,18 @@ public class SVEditOdonto extends HttpServlet {
         String fechaNacStr = request.getParameter("fechanac");
         
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String fechaNacStr = sdf.format(fechanac);
-        Date fechaNac = null;
+        Date fechaNac = new Date();
         try {
-            fechaNac = formatoDate.parse(fecha);
-        } catch (ParseException e) {
+            fechaNac = sdf.parse(fechaNacStr);
+        } catch (ParseException ex) {
+            Logger.getLogger(SVEditOdonto.class.getName()).log(Level.SEVERE, null, ex);
         }
+
         
         Odontologo odon = (Odontologo) request.getSession().getAttribute("odontoEditar");
         Horario hora = odon.getUnHorario();
-        System.out.println(hora);
-        System.out.println("Horario antes de la edición: " + hora.getHorarioInicio()+ "-" + hora.getHorarioFin());
         hora.setHorarioInicio(horarioinicio);
         hora.setHorarioFin(horariofin);
-        System.out.println("Horario después de la edición: " + hora.getHorarioInicio()+ "-" + hora.getHorarioFin());
         odon.setNombre(nombre);
         odon.setApellido(apellido);
         odon.setEspecialidad(especialidad);

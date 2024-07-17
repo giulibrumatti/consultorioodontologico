@@ -62,6 +62,9 @@ public class Controladora {
         return controlPersis.getUsuarios();
     }
     
+    public List<Paciente> getPacientes(){
+        return controlPersis.getPacientes();
+    }
     public void borrarUsuario(int id){
         controlPersis.borrarUsuario(id);
     }
@@ -69,6 +72,11 @@ public class Controladora {
     public void borrarOdonto(int id){
         controlPersis.borrarOdonto(id);
     }
+    
+    public void borrarHorario(int id){
+        controlPersis.borrarHorario(id);
+    }
+
 
     public Usuario traerUsuario(int id) {
         return controlPersis.traerUsuario(id);
