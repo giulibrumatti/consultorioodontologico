@@ -49,6 +49,9 @@ public class SVPacientes extends HttpServlet {
         String dni = request.getParameter("dni");
         String tel = request.getParameter("tel");
         String direccion = request.getParameter("direccion");
+        String tOS = request.getParameter("tieneOs");
+        boolean tieneOS = true;
+        String tipoDeSangre = request.getParameter("tipoSangre");
         
         SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
         String fecha = request.getParameter("fechanac");
@@ -57,6 +60,19 @@ public class SVPacientes extends HttpServlet {
             fechaNac = formatoDate.parse(fecha);
         } catch (ParseException e) {
         }
+        Paciente paciente = new Paciente();
+        paciente.setNombre(nombre);
+        paciente.setApellido(apellido);
+        paciente.setDni(dni);
+        paciente.setTelefono(tel);
+        paciente.setDireccion(direccion);
+        paciente.setFechaNac(fechaNac);
+        paciente.setTipoSangre(tipoDeSangre);
+        paciente.setTieneOS(tieneOS);
+        
+        control.crearPaciente(0, nombre, apellido, dni, tel, direccion, fechaNac, tipoDeSangre, tieneOS);
+
+        response.sendRedirect("SVPacientes");
        
     }
 

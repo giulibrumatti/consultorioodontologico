@@ -41,6 +41,10 @@ public class ControladoraPersistencia {
     public void crearHorario(Horario hora){
         horaJPA.create(hora);
     }
+    
+    public void crearPaciente(Paciente pac){
+        pacienteJPA.create(pac);
+    }
 
     public List<Usuario> getUsuarios() {
         return usJPA.findUsuarioEntities();

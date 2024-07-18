@@ -28,6 +28,21 @@ public class Controladora {
         controlPersis.crearHorario(hora);
     }
     
+    public void crearPaciente(int id, String nombre, String apellido, String dni, String tel, String direccion, Date fechaNac, 
+            String tipoSangre, boolean tieneOS){
+        Paciente paciente = new Paciente();
+        paciente.setNombre(nombre);
+        paciente.setApellido(apellido);
+        paciente.setDni(dni);
+        paciente.setTelefono(tel);
+        paciente.setDireccion(direccion);
+        paciente.setFechaNac(fechaNac);
+        paciente.setTieneOS(tieneOS);
+        paciente.setTipoSangre(tipoSangre);
+        
+        controlPersis.crearPaciente(paciente);
+    }
+    
     public void crearOdontologo(int id, String nombre, String apellido, String dni, String tel, String direccion, 
             Date fechaNac, String especialidad, String horarioinicio, String horariofin){
         

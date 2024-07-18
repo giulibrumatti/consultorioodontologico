@@ -40,21 +40,26 @@
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <select name="¿Tiene Obra Social?">
-                    <option value="true">Si</option>
-                    <option value="false">No</option>
-                </select>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        ¿Tiene obra social?
+                    </label>
+                </div>
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <select name="Tipo de sangre">
-                    <option value="true">Si</option>
-                    <option value="false">No</option>
+                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de Sangre</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                    <option selected>Elegir...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
                 </select>
             </div>
         </div>
-            <button class="btn btn-primary btn-user btn-block" type="submit">
-                Registrar Paciente
-            </button>
+        <button class="btn btn-primary btn-user btn-block" type="submit">
+            Registrar Paciente
+        </button>
         <hr>
     </form>
 </div>
