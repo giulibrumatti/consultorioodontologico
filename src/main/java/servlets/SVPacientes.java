@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Odontologo;
 import logica.Paciente;
+import logica.Responsable;
 
 @WebServlet(name = "SVPacientes", urlPatterns = {"/SVPacientes"})
 public class SVPacientes extends HttpServlet {
@@ -49,10 +50,9 @@ public class SVPacientes extends HttpServlet {
         String dni = request.getParameter("dni");
         String tel = request.getParameter("tel");
         String direccion = request.getParameter("direccion");
-        String tOS = request.getParameter("tieneOs");
-        boolean tieneOS = true;
         String tipoDeSangre = request.getParameter("tipoSangre");
-        
+        boolean tieneOS = "true".equals(request.getParameter("tieneOs"));
+                
         SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
         String fecha = request.getParameter("fechanac");
         Date fechaNac = null;
@@ -60,7 +60,31 @@ public class SVPacientes extends HttpServlet {
             fechaNac = formatoDate.parse(fecha);
         } catch (ParseException e) {
         }
+        
+        String nombreRes = request.getParameter("nombreRes");
+        String apellidoRes = request.getParameter("apellidoRes");
+        String dniRes = request.getParameter("dniRes");
+        String telRes = request.getParameter("telRes");
+        String direccionRes = request.getParameter("direccionRes");
+        String fechaRes = request.getParameter("fechanacRes");
+        Date fechaNacRes = null;
+        try {
+            fechaNacRes = formatoDate.parse(fechaRes);
+        } catch (ParseException e) {
+        }
+        String tipoRes = request.getParameter("tipoRes");
+        
         Paciente paciente = new Paciente();
+        Responsable respo = new Responsable();
+        
+        respo.setNombre(nombreRes);
+        respo.setApellido(apellidoRes);
+        respo.setDni(dniRes);
+        respo.setTelefono(telRes);
+        respo.setDireccion(direccionRes);
+        respo.setFechaNac(fechaNacRes);
+        respo.setTipoResp(tipoRes);
+        
         paciente.setNombre(nombre);
         paciente.setApellido(apellido);
         paciente.setDni(dni);
@@ -69,8 +93,10 @@ public class SVPacientes extends HttpServlet {
         paciente.setFechaNac(fechaNac);
         paciente.setTipoSangre(tipoDeSangre);
         paciente.setTieneOS(tieneOS);
+        paciente.setUnResponsable(respo);
         
-        control.crearPaciente(0, nombre, apellido, dni, tel, direccion, fechaNac, tipoDeSangre, tieneOS);
+        control.crearPaciente(0, nombre, apellido, dni, tel, direccion, fechaNac, tipoDeSangre, tieneOS, 
+                nombreRes, apellidoRes, dniRes, telRes, direccionRes, fechaNacRes, tipoRes);
 
         response.sendRedirect("SVPacientes");
        

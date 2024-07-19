@@ -29,8 +29,20 @@ public class Controladora {
     }
     
     public void crearPaciente(int id, String nombre, String apellido, String dni, String tel, String direccion, Date fechaNac, 
-            String tipoSangre, boolean tieneOS){
+        String tipoSangre, boolean tieneOS, String nombreRes, String apellidoRes, String dniRes, String telRes, String direccionRes, 
+        Date fechaNacRes, String tipoRes){
+        
         Paciente paciente = new Paciente();
+        Responsable respo = new Responsable();
+        
+        respo.setNombre(nombreRes);
+        respo.setApellido(apellidoRes);
+        respo.setDni(dniRes);
+        respo.setTelefono(telRes);
+        respo.setDireccion(direccionRes);
+        respo.setFechaNac(fechaNacRes);
+        respo.setTipoResp(tipoRes);
+        
         paciente.setNombre(nombre);
         paciente.setApellido(apellido);
         paciente.setDni(dni);
@@ -39,6 +51,7 @@ public class Controladora {
         paciente.setFechaNac(fechaNac);
         paciente.setTieneOS(tieneOS);
         paciente.setTipoSangre(tipoSangre);
+        paciente.setUnResponsable(respo);
         
         controlPersis.crearPaciente(paciente);
     }

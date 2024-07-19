@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import logica.Horario;
 import logica.Odontologo;
 import logica.Paciente;
+import logica.Responsable;
 import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -44,6 +45,10 @@ public class ControladoraPersistencia {
     
     public void crearPaciente(Paciente pac){
         pacienteJPA.create(pac);
+    }
+    
+    public void crearResponsable(Responsable res){
+        resJPA.create(res);
     }
 
     public List<Usuario> getUsuarios() {

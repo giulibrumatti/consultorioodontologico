@@ -52,6 +52,7 @@
                                 <td> <%= fechaFormateada %></td>
                                 <td> <%= paciente.getTieneOS() %></td>
                                 <td> <%= paciente.getTipoSangre() %></td>
+                                <td> <%= paciente.getUnResponsable().getNombre() %> <%= paciente.getUnResponsable().getApellido() %></td>
                                 <td style="display: flex; width:230px">
                                     <form name="editar" action="SVEditOdonto" method="GET">
                                         <button type="submit" class="btn btn-primary btn-circle btn-block m-1" style="margin-left: 5px;">
@@ -59,7 +60,7 @@
                                         </button>
                                         <input type="hidden" name="idPaciente" value="<%=paciente.getId()%>">
                                     </form>
-                                    <form name="eliminar" action="SVElimOdonto" method="POST">
+                                    <form name="eliminar" action="SVElimPaciente" method="POST">
                                         <button type="submit" class="btn btn-danger btn-circle m-1" style="border-color:red; background-color:red; margin-right: 5px;">
                                             <i class="fas fa-trash"></i>
                                         </button>

@@ -4,6 +4,7 @@ package logica;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -14,7 +15,7 @@ public class Paciente extends Persona implements Serializable{
     
     private Boolean tieneOS;
     private String tipoSangre;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private Responsable unResponsable;
     @OneToMany(mappedBy="pacien")
     private List<Turno> listaTurnos;

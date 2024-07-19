@@ -24,7 +24,5 @@ public class Responsable extends Persona{
     public void setTipoResp(String tipoResp) {
         this.tipoResp = tipoResp;
     }
-    
-    
-    
+   
 }

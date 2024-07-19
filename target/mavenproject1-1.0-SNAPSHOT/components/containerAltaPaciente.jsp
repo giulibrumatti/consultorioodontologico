@@ -41,22 +41,74 @@
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" value="" id="tieneOs">
+                    <label class="form-check-label" for="tieneOs">
                         ¿Tiene obra social?
                     </label>
                 </div>
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de Sangre</label>
-                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <label class="my-1 mr-2" for="tipoSangre">Tipo de Sangre</label>
+                <select class="custom-select my-1 mr-sm-2" id="tipoSangre">
                     <option selected>Elegir...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="B-">AB+</option>
+                    <option value="B-">AB-</option>
+                    <option value="B-">O+</option>
+                    <option value="B-">O-</option>
                 </select>
             </div>
         </div>
+
+        <details class="m-3">
+            <summary class="m-3 text-center">Haz clic para agregar un responsable</summary>
+            <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control form-control-user" id="nombreRes"
+                           name="nombreRes" placeholder="Nombre">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control form-control-user" id="apellidoRes"
+                           name="apellidoRes" placeholder="Apellido">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control form-control-user" id="dniRes"
+                           name="dniRes" placeholder="DNI">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control form-control-user" id="telRes"
+                           name="telRes" placeholder="Teléfono">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control form-control-user" id="direccionRes"
+                           name="direccionRes" placeholder="Dirección">
+                </div>
+                <div class="col-sm-6">
+                    <input type="date" class="form-control form-control-user" id="fechanacRes"
+                           name="fechanacRes" placeholder="Fecha de nacimiento">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label class="my-1 mr-2" for="tipoRes">Tipo de responsable</label>
+                    <select class="custom-select my-1 mr-sm-2" id="tipoRes">
+                        <option selected>Elegir...</option>
+                        <option value="A+">Padre</option>
+                        <option value="A-">Madre</option>
+                        <option value="B+">Hermano/a</option>
+                        <option value="B-">Abuelo/a</option>
+                        <option value="B-">Otro/a</option>
+                    </select>
+                </div>
+            </div>
+        </details>
         <button class="btn btn-primary btn-user btn-block" type="submit">
             Registrar Paciente
         </button>
