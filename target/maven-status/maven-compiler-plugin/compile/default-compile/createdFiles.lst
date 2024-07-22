@@ -4,6 +4,7 @@ logica\Usuario.class
 servlets\SVEditOdonto.class
 logica\Persona.class
 servlets\SVLogin.class
+servlets\SVPacientes.class
 logica\Secretario_.class
 logica\Turno.class
 persistencia\UsuarioJpaController.class

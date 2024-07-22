@@ -104,7 +104,10 @@ public class Controladora {
     public void borrarHorario(int id){
         controlPersis.borrarHorario(id);
     }
-
+    
+    public Paciente traerPaciente(int id) {
+        return controlPersis.traerPaciente(id);
+    }
 
     public Usuario traerUsuario(int id) {
         return controlPersis.traerUsuario(id);
@@ -146,5 +149,17 @@ public class Controladora {
 
     public void editarHorario(Horario unHorario) {
         controlPersis.editarHorario(unHorario);
+    }
+    
+    public void editarPaciente(Paciente paciente){
+        controlPersis.editarPaciente(paciente);
+    }
+
+    public void borrarPaciente(int idPaciente) {
+        controlPersis.borrarPaciente(idPaciente);
+    }
+
+    public void borrarResponsable(int idResponsable) {
+        controlPersis.borrarResponsable(idResponsable);
     }
 }

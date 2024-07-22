@@ -50,7 +50,7 @@
                                 <td> <%= paciente.getTelefono()%></td>
                                 <td> <%= paciente.getDireccion()%></td>
                                 <td> <%= fechaFormateada %></td>
-                                <td> <%= paciente.getTieneOS() %></td>
+                                <td> <%= paciente.getTieneOSString() %></td>
                                 <td> <%= paciente.getTipoSangre() %></td>
                                 <td> <%= paciente.getUnResponsable().getNombre() %> <%= paciente.getUnResponsable().getApellido() %></td>
                                 <td style="display: flex; width:230px">
@@ -59,8 +59,9 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                         <input type="hidden" name="idPaciente" value="<%=paciente.getId()%>">
+                                        <input type="hidden" name="idResponsable" value="<%=paciente.getUnResponsable().getId()%>">
                                     </form>
-                                    <form name="eliminar" action="SVElimPaciente" method="POST">
+                                    <form name="eliminar" action="SVElimPac" method="POST">
                                         <button type="submit" class="btn btn-danger btn-circle m-1" style="border-color:red; background-color:red; margin-right: 5px;">
                                             <i class="fas fa-trash"></i>
                                         </button>

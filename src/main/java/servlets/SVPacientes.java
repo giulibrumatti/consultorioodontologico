@@ -53,7 +53,7 @@ public class SVPacientes extends HttpServlet {
         String tipoDeSangre = request.getParameter("tipoSangre");
         boolean tieneOS = "true".equals(request.getParameter("tieneOs"));
                 
-        SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formatoDate = new SimpleDateFormat("yyyy-MM-dd");
         String fecha = request.getParameter("fechanac");
         Date fechaNac = null;
         try {

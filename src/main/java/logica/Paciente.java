@@ -51,6 +51,14 @@ public class Paciente extends Persona implements Serializable{
     public Boolean getTieneOS() {
         return tieneOS;
     }
+    
+    public String getTieneOSString(){
+        String salida = "No";
+        if (tieneOS){
+            salida = "Si";
+        }
+        return salida;
+    }
 
     public void setTieneOS(Boolean tieneOS) {
         this.tieneOS = tieneOS;

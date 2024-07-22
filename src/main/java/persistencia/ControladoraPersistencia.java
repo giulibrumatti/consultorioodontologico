@@ -86,6 +86,23 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public void borrarPaciente(int id){
+        try {
+            pacienteJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void borrarResponsable(int id){
+        try {
+            resJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
 
 
     public Usuario traerUsuario(int id) {
@@ -99,6 +116,11 @@ public class ControladoraPersistencia {
     public Horario traerHorario(int id) {
         return horaJPA.findHorario(id);
     }
+    
+    public Paciente traerPaciente(int id) {
+        return pacienteJPA.findPaciente(id);
+    }
+
 
     public void editarUsuario(Usuario us) {
         try {
@@ -111,6 +133,14 @@ public class ControladoraPersistencia {
     public void editarOdontologo(Odontologo odon) {
         try {
             odontoJPA.edit(odon);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void editarPaciente(Paciente paciente) {
+        try {
+            pacienteJPA.edit(paciente);
         } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }

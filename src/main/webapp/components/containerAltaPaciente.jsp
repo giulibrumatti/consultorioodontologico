@@ -41,7 +41,7 @@
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="tieneOs">
+                    <input class="form-check-input" type="checkbox" value="true" id="tieneOs" name="tieneOs">
                     <label class="form-check-label" for="tieneOs">
                         ¿Tiene obra social?
                     </label>
@@ -49,16 +49,16 @@
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label class="my-1 mr-2" for="tipoSangre">Tipo de Sangre</label>
-                <select class="custom-select my-1 mr-sm-2" id="tipoSangre">
+                <select class="custom-select my-1 mr-sm-2" id="tipoSangre" name="tipoSangre">
                     <option selected>Elegir...</option>
                     <option value="A+">A+</option>
                     <option value="A-">A-</option>
                     <option value="B+">B+</option>
                     <option value="B-">B-</option>
-                    <option value="B-">AB+</option>
-                    <option value="B-">AB-</option>
-                    <option value="B-">O+</option>
-                    <option value="B-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
                 </select>
             </div>
         </div>
@@ -98,13 +98,13 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label class="my-1 mr-2" for="tipoRes">Tipo de responsable</label>
-                    <select class="custom-select my-1 mr-sm-2" id="tipoRes">
+                    <select class="custom-select my-1 mr-sm-2" id="tipoRes" name="tipoRes">
                         <option selected>Elegir...</option>
-                        <option value="A+">Padre</option>
-                        <option value="A-">Madre</option>
-                        <option value="B+">Hermano/a</option>
-                        <option value="B-">Abuelo/a</option>
-                        <option value="B-">Otro/a</option>
+                        <option value="Padre">Padre</option>
+                        <option value="Madre-">Madre</option>
+                        <option value="Hermano/a">Hermano/a</option>
+                        <option value="Abuelo/a">Abuelo/a</option>
+                        <option value="Otro/a">Otro/a</option>
                     </select>
                 </div>
             </div>

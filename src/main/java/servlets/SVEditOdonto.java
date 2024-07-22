@@ -30,6 +30,7 @@ public class SVEditOdonto extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         int idOdonto = Integer.parseInt(request.getParameter("idOdonto"));
         
         Odontologo odonto = control.traerOdontologo(idOdonto);

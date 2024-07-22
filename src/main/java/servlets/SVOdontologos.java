@@ -58,7 +58,7 @@ public class SVOdontologos extends HttpServlet {
         String horariofin = request.getParameter("horariofin");
         
         // Convertir fecha
-        SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formatoDate = new SimpleDateFormat("yyyy-MM-dd");
         String fecha = request.getParameter("fechanac");
         Date fechaNac = null;
         try {
