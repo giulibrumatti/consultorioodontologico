@@ -20,6 +20,7 @@ servlets\SVEditUsuarios.class
 persistencia\SecretarioJpaController.class
 logica\Odontologo.class
 logica\Responsable_.class
+servlets\SVElimPac.class
 servlets\SVUsuarios.class
 persistencia\HorarioJpaController.class
 logica\Paciente.class
@@ -31,6 +32,7 @@ logica\Secretario.class
 logica\Horario_.class
 persistencia\PacienteJpaController.class
 persistencia\PersonaJpaController.class
+servlets\SVEditPac.class
 logica\Responsable.class
 persistencia\exceptions\NonexistentEntityException.class
 persistencia\TurnoJpaController.class

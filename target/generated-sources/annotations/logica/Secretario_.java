@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import logica.Usuario;
 
-@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-07-22T13:00:30")
+@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-07-24T13:11:28")
 @StaticMetamodel(Secretario.class)
 public class Secretario_ extends Persona_ {
 

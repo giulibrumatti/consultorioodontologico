@@ -1,5 +1,6 @@
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Controladora.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\servlets\SVLogin.java
+C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\servlets\SVElimPac.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\servlets\SVPacientes.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Usuario.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Responsable.java
@@ -12,6 +13,7 @@ C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\servlets\SVEditUsuarios.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Persona.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\ResponsableJpaController.java
+C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\servlets\SVEditPac.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\logica\Odontologo.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\servlets\SVEditOdonto.java
 C:\Users\Rombo del Tejar\Desktop\Proyectos\consultorioodontologico\src\main\java\persistencia\PacienteJpaController.java

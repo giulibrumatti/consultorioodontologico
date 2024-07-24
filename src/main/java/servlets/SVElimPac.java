@@ -34,7 +34,7 @@ public class SVElimPac extends HttpServlet {
         control.borrarPaciente(idPaciente);
         control.borrarResponsable(idResponsable);
         
-        response.sendRedirect("SVOdontologos");
+        response.sendRedirect("SVPacientes");
     }
 
     @Override
