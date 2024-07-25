@@ -46,7 +46,7 @@ public class SVEditPac extends HttpServlet {
         String tel = request.getParameter("tel");
         String direccion = request.getParameter("direccion");
         String tipoDeSangre = request.getParameter("tipoSangre");
-        boolean tieneOS = "true".equals(request.getParameter("tieneOs"));
+        boolean tieneOS = "true".equals(request.getParameter("tieneOS"));
         
         SimpleDateFormat formatoDate = new SimpleDateFormat("yyyy-MM-dd");
         String fecha = request.getParameter("fechanac");

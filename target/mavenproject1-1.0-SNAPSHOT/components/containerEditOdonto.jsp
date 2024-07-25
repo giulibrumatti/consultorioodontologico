@@ -1,5 +1,7 @@
 
 
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="logica.Horario"%>
 <%@page import="logica.Odontologo"%>
 <%@page import="logica.Usuario"%>
@@ -42,10 +44,14 @@
                 <input type="text" class="form-control form-control-user" name="direccion" id="direccion"
                        placeholder="Dirección" value="<%=odonto.getDireccion()%>">
             </div>
+            <%
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Date fechaPac = odonto.getFechaNac();
+                String formattedDate = (fechaPac != null) ? dateFormat.format(fechaPac) : "";
+            %>
             <div class="col-sm-6 mb-3 mb-sm-0">
-                
                 <label for="fechanac" class="text-gray-600 small" >Fecha Nacimiento </label>
-                <input type="date" class="form-control form-control-user" name="fechanac" id="fechanac">
+                <input type="date" class="form-control form-control-user" name="fechanac" id="fechanac" value="<%=formattedDate%>">
             </div> 
         </div>
         <div class="form-group row">
