@@ -28,6 +28,22 @@ public class Turno implements Serializable {
     @JoinColumn(name="id_pacien")
     private Paciente pacien;
 
+    public Odontologo getOdonto() {
+        return odonto;
+    }
+
+    public void setOdonto(Odontologo odonto) {
+        this.odonto = odonto;
+    }
+
+    public Paciente getPacien() {
+        return pacien;
+    }
+
+    public void setPacien(Paciente pacien) {
+        this.pacien = pacien;
+    }
+
     public Turno(int idTurno, Date fechaTurno, String horaTurno, String afeccion) {
         this.idTurno = idTurno;
         this.fechaTurno = fechaTurno;

@@ -8,6 +8,7 @@ import logica.Horario;
 import logica.Odontologo;
 import logica.Paciente;
 import logica.Responsable;
+import logica.Turno;
 import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -53,6 +54,10 @@ public class ControladoraPersistencia {
 
     public List<Usuario> getUsuarios() {
         return usJPA.findUsuarioEntities();
+    }
+    
+    public List<Turno> getTurnos() {
+        return turnoJPA.findTurnoEntities();
     }
     
     public List<Odontologo> getOdontologos() {
@@ -141,6 +146,14 @@ public class ControladoraPersistencia {
     public void editarPaciente(Paciente paciente) {
         try {
             pacienteJPA.edit(paciente);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void editarResponsable(Responsable responsable) {
+        try {
+            resJPA.edit(responsable);
         } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }

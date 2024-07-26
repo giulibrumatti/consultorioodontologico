@@ -67,15 +67,18 @@
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label class="my-1 mr-2" for="tipoSangre">Tipo de Sangre</label>
                 <select class="custom-select my-1 mr-sm-2" id="tipoSangre" name="tipoSangre">
-                    <option selected><%=paciente.getTipoSangre()%></option>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
+                    <%
+                        String tipoSangreSeleccionado = paciente.getTipoSangre();
+                    %>
+                    <option value="">Seleccione un tipo de sangre</option>
+                    <option value="A+" <%= "A+".equals(tipoSangreSeleccionado) ? "selected" : ""%>>A+</option>
+                    <option value="A-" <%= "A-".equals(tipoSangreSeleccionado) ? "selected" : ""%>>A-</option>
+                    <option value="B+" <%= "B+".equals(tipoSangreSeleccionado) ? "selected" : ""%>>B+</option>
+                    <option value="B-" <%= "B-".equals(tipoSangreSeleccionado) ? "selected" : ""%>>B-</option>
+                    <option value="AB+" <%= "AB+".equals(tipoSangreSeleccionado) ? "selected" : ""%>>AB+</option>
+                    <option value="AB-" <%= "AB-".equals(tipoSangreSeleccionado) ? "selected" : ""%>>AB-</option>
+                    <option value="O+" <%= "O+".equals(tipoSangreSeleccionado) ? "selected" : ""%>>O+</option>
+                    <option value="O-" <%= "O-".equals(tipoSangreSeleccionado) ? "selected" : ""%>>O-</option>
                 </select>
             </div>
         </div>
@@ -120,12 +123,16 @@
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label class="my-1 mr-2" for="tipoRes">Tipo de responsable</label>
                     <select class="custom-select my-1 mr-sm-2" id="tipoRes" name="tipoRes">
-                        <option selected><%=paciente.getUnResponsable().getTipoResp()%></option>
-                        <option value="Padre">Padre</option>
-                        <option value="Madre-">Madre</option>
-                        <option value="Hermano/a">Hermano/a</option>
-                        <option value="Abuelo/a">Abuelo/a</option>
-                        <option value="Otro/a">Otro/a</option>
+                        <%
+                            String tipoRespSelect = paciente.getUnResponsable().getTipoResp();
+                        %>
+                        <option value="">Seleccione un tipo de responsable</option>
+                        <option value="Padre" <%= "Padre".equals(tipoRespSelect) ? "selected" : ""%>>Padre</option>
+                        <option value="Madre" <%= "Madre".equals(tipoRespSelect) ? "selected" : ""%>>Madre</option>
+                        <option value="Hermano/a" <%= "Hermano/a".equals(tipoRespSelect) ? "selected" : ""%>>Hermano/a</option>
+                        <option value="Abuelo/a" <%= "Abuelo/a".equals(tipoRespSelect) ? "selected" : ""%>>Abuelo/a</option>
+                        <option value="Esposo/a" <%= "Esposo/a".equals(tipoRespSelect) ? "selected" : ""%>>Esposo/a</option>
+                        <option value="Otro/a" <%= "Otro/a".equals(tipoRespSelect) ? "selected" : ""%>>Otro/a</option>
                     </select>
                 </div>
             </div>

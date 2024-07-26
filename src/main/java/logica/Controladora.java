@@ -90,6 +90,11 @@ public class Controladora {
         return controlPersis.getUsuarios();
     }
     
+    public List<Turno> getTurnos(){
+        return controlPersis.getTurnos();
+    }
+    
+    
     public List<Paciente> getPacientes(){
         return controlPersis.getPacientes();
     }
@@ -153,6 +158,7 @@ public class Controladora {
     
     public void editarPaciente(Paciente paciente){
         controlPersis.editarPaciente(paciente);
+        controlPersis.editarResponsable(paciente.getUnResponsable());
     }
 
     public void borrarPaciente(int idPaciente) {
