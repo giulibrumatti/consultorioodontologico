@@ -21,8 +21,10 @@ persistencia\SecretarioJpaController.class
 logica\Odontologo.class
 logica\Responsable_.class
 servlets\SVElimPac.class
+servlets\SVElimTurno.class
 servlets\SVUsuarios.class
 persistencia\HorarioJpaController.class
+servlets\SVTurnos.class
 logica\Paciente.class
 logica\Horario.class
 logica\Controladora.class

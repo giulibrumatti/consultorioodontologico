@@ -56,6 +56,17 @@ public class Controladora {
         controlPersis.crearPaciente(paciente);
     }
     
+    public void crearTurno(int id, int idOdonto, int idPacien, String hora, Date fecha, String afeccion, Odontologo odonto, Paciente pacien){
+        Turno turno = new Turno();
+        turno.setAfeccion(afeccion);
+        turno.setFechaTurno(fecha);
+        turno.setHoraTurno(hora);
+        turno.setOdonto(odonto);
+        turno.setPacien(pacien);
+        controlPersis.crearTurno(turno);
+        
+    }
+    
     public void crearOdontologo(int id, String nombre, String apellido, String dni, String tel, String direccion, 
             Date fechaNac, String especialidad, String horarioinicio, String horariofin){
         
@@ -110,12 +121,20 @@ public class Controladora {
         controlPersis.borrarHorario(id);
     }
     
+    public void borrarTurno(int id){
+        controlPersis.borrarTurno(id);
+    }
+    
     public Paciente traerPaciente(int id) {
         return controlPersis.traerPaciente(id);
     }
 
     public Usuario traerUsuario(int id) {
         return controlPersis.traerUsuario(id);
+    }
+    
+    public Turno traerTurno(int id) {
+        return controlPersis.traerTurno(id);
     }
     
     public Odontologo traerOdontologo(int id) {
@@ -154,6 +173,10 @@ public class Controladora {
 
     public void editarHorario(Horario unHorario) {
         controlPersis.editarHorario(unHorario);
+    }
+    
+    public void editarTurno(Turno turno) {
+        controlPersis.editarTurno(turno);
     }
     
     public void editarPaciente(Paciente paciente){

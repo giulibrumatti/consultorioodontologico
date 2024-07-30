@@ -48,6 +48,10 @@ public class ControladoraPersistencia {
         pacienteJPA.create(pac);
     }
     
+    public void crearTurno(Turno turno){
+        turnoJPA.create(turno);
+    }
+    
     public void crearResponsable(Responsable res){
         resJPA.create(res);
     }
@@ -84,6 +88,14 @@ public class ControladoraPersistencia {
         }
     }
     
+    public void borrarTurno(int id){
+        try {
+            turnoJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     public void borrarHorario(int id){
         try {
             horaJPA.destroy(id);
@@ -108,7 +120,9 @@ public class ControladoraPersistencia {
         }
     }
     
-
+    public Turno traerTurno(int id) {
+        return turnoJPA.findTurno(id);
+    }
 
     public Usuario traerUsuario(int id) {
         return usJPA.findUsuario(id);
@@ -146,6 +160,14 @@ public class ControladoraPersistencia {
     public void editarPaciente(Paciente paciente) {
         try {
             pacienteJPA.edit(paciente);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void editarTurno(Turno turno) {
+        try {
+            turnoJPA.edit(turno);
         } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }

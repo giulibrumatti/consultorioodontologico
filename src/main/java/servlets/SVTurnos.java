@@ -63,20 +63,33 @@ public class SVTurnos extends HttpServlet {
         int idOdonto = Integer.parseInt(odonto);
         int idPaciente = Integer.parseInt(pac);
         
-        SimpleDateFormat formatoDate = new SimpleDateFormat("yyyy-MM-dd");
-        String fechaTurno = request.getParameter("fechaTurno");
-        Date fechaT = null;
+       
+        String fechaTurnoStr = request.getParameter("fechaTurno");
+        Date fechaTurno = null;
         try {
-            fechaT = formatoDate.parse(fechaTurno);
+            if (fechaTurnoStr != null && !fechaTurnoStr.isEmpty()) {
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                fechaTurno = dateFormat.parse(fechaTurnoStr);
+            } else {
+                System.out.println("El parámetro 'fechaTurno' no fue proporcionado o está vacío.");
+                // Manejar este caso según sea necesario
+            }
         } catch (ParseException e) {
+            System.out.println("Error al parsear la fecha del turno: " + e.getMessage());
+            // Manejar este error según sea necesario
         }
-        Odontologo odontologo = new Odontologo();
-        Paciente paciente = new Paciente();
+        Odontologo odontologo = control.traerOdontologo(idOdonto);
+        Paciente paciente = control.traerPaciente(idPaciente);
         Turno turno = new Turno();
         turno.setHoraTurno(horaTurno);
         turno.setAfeccion(afeccion);
-        turno.setFechaTurno(fechaT);
+        turno.setFechaTurno(fechaTurno);
+        turno.setOdonto(odontologo);
+        turno.setPacien(paciente);
         
+        control.crearTurno(0,idOdonto, idPaciente, horaTurno, fechaTurno, afeccion, odontologo, paciente);
+        
+        response.sendRedirect("SVTurnos");
     }
 
     @Override

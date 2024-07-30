@@ -38,7 +38,7 @@
                         %>
                         <tbody>                               
                             <tr>
-                                <td id="idPaciente<%=turno.getIdTurno()%>"> <%= turno.getIdTurno()%> </td>
+                                <td id="idTurno<%=turno.getIdTurno()%>"> <%= turno.getIdTurno()%> </td>
                                 <td> <%= nombrePaciente%> </td>
                                 <td> <%= nombreOdonto%> </td>
                                 <td> <%= fechaFormateada%></td>
@@ -49,14 +49,14 @@
                                         <button type="submit" class="btn btn-primary btn-circle btn-block m-1" style="margin-left: 5px;">
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
-                                        <input type="hidden" name="idPaciente" value="<%=turno.getIdTurno()%>">
+                                        <input type="hidden" name="idTurno" value="<%=turno.getIdTurno()%>">
                                         
                                     </form>
                                     <form name="eliminar" action="SVElimTurno" method="POST">
                                         <button type="submit" class="btn btn-danger btn-circle m-1" style="border-color:red; background-color:red; margin-right: 5px;">
                                             <i class="fas fa-trash"></i>
                                         </button>
-                                        <input type="hidden" name="idPaciente" value="<%=turno.getIdTurno()%>">
+                                        <input type="hidden" name="idTurno" value="<%=turno.getIdTurno()%>">
                                         
                                     </form>
                                 </td>
