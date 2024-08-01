@@ -86,6 +86,8 @@ public class SVTurnos extends HttpServlet {
         turno.setFechaTurno(fechaTurno);
         turno.setOdonto(odontologo);
         turno.setPacien(paciente);
+        odontologo.agregarTurno(turno);
+        paciente.agregarTurno(turno);
         
         control.crearTurno(0,idOdonto, idPaciente, horaTurno, fechaTurno, afeccion, odontologo, paciente);
         

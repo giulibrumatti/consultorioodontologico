@@ -71,6 +71,12 @@
                                         <input type="hidden" name="idHorario" value="<%=odon.getUnHorario().getIdHorario()%>">
                                         <input type="hidden" name="idUsuario" value="<%=odon.getUnUsuario().getIdUsuario()%>">
                                     </form>
+                                    <form name="verTurnos" action="SVTurnosPorOdonto" method="GET">
+                                        <button type="submit" class="btn btn-outline-success m-1" margin-right: 5px;">
+                                            <i class="bi bi-journal-text"></i> Ver turnos
+                                        </button>
+                                        <input type="hidden" name="idOdonto" value="<%=odon.getId()%>">
+                                    </form>
                                 </td>
                             </tr>
                             <%}%>

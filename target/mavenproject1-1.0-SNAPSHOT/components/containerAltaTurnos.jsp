@@ -68,15 +68,18 @@
         </div>
         <div class="form-group row">
             <div class="col-sm-6">
+                <label for="afeccion" class="text-gray-600 small" >Afección</label>
                 <input type="text" class="form-control form-control-user" id="afeccion"
                        name="afeccion" placeholder="Afección">
             </div>
         </div>
 
 
-        <button class="btn btn-primary btn-user btn-block" type="submit">
-            Registrar Turno
-        </button>
+        <div class="text-center">
+            <button class="btn btn-primary btn-user" type="submit">
+                Registrar Turno
+            </button>
+        </div>
         <hr>
     </form>
 </div>

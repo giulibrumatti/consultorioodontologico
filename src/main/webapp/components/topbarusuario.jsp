@@ -1,12 +1,9 @@
-<%-- 
-    Document   : topbar.jsp
-    Created on : 7 may. 2024, 13:25:36
-    Author     : Rombo del Tejar
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    Consultorio Odontológico
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <div class="topbar-divider d-none d-sm-block"></div>

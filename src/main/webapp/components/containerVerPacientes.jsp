@@ -49,10 +49,10 @@
                                 <td> <%= paciente.getDni()%></td>
                                 <td> <%= paciente.getTelefono()%></td>
                                 <td> <%= paciente.getDireccion()%></td>
-                                <td> <%= fechaFormateada %></td>
-                                <td> <%= paciente.getTieneOSString() %></td>
-                                <td> <%= paciente.getTipoSangre() %></td>
-                                <td> <%= paciente.getUnResponsable().getNombre() %> <%= paciente.getUnResponsable().getApellido() %></td>
+                                <td> <%= fechaFormateada%></td>
+                                <td> <%= paciente.getTieneOSString()%></td>
+                                <td> <%= paciente.getTipoSangre()%></td>
+                                <td> <%= paciente.getUnResponsable().getNombre()%> <%= paciente.getUnResponsable().getApellido()%></td>
                                 <td style="display: flex; width:230px">
                                     <form name="editar" action="SVEditPac" method="GET">
                                         <button type="submit" class="btn btn-primary btn-circle btn-block m-1" style="margin-left: 5px;">
@@ -67,6 +67,12 @@
                                         </button>
                                         <input type="hidden" name="idPaciente" value="<%=paciente.getId()%>">
                                         <input type="hidden" name="idResponsable" value="<%=paciente.getUnResponsable().getId()%>">
+                                    </form>
+                                    <form name="verTurnos" action="SVTurnosPorPac" method="GET">
+                                        <button type="submit" class="btn btn-outline-success m-1" margin-right: 5px;">
+                                            <i class="bi bi-journal-text"></i> Ver turnos
+                                        </button>
+                                        <input type="hidden" name="idPac" value="<%=paciente.getId()%>">
                                     </form>
                                 </td>
                             </tr>

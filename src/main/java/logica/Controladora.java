@@ -63,6 +63,8 @@ public class Controladora {
         turno.setHoraTurno(hora);
         turno.setOdonto(odonto);
         turno.setPacien(pacien);
+        odonto.agregarTurno(turno);
+        pacien.agregarTurno(turno);
         controlPersis.crearTurno(turno);
         
     }
@@ -104,7 +106,6 @@ public class Controladora {
     public List<Turno> getTurnos(){
         return controlPersis.getTurnos();
     }
-    
     
     public List<Paciente> getPacientes(){
         return controlPersis.getPacientes();

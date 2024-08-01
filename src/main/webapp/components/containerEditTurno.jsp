@@ -74,9 +74,11 @@
                        placeholder="Hora del turno" value="<%=turno.getAfeccion()%>">
             </div>
         </div>
-        <button class="btn btn-primary btn-user btn-block" type="submit">
-            Guardar edición
-        </button>
+        <div class="text-center">
+            <button class="btn btn-primary btn-user" type="submit">
+                Guardar Edición
+            </button>
+        </div>
 
         <hr>
     </form>

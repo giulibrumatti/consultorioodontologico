@@ -57,12 +57,12 @@
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="horarioInicio" class="text-gray-600 small" >Horario Inicio</label>
-                <input type="text" class="form-control form-control-user" name="horarioInicio" id="horarioInicio"
+                <input type="time" class="form-control form-control-user" name="horarioInicio" id="horarioInicio"
                        placeholder="Horario Inicio" value="<%=odonto.getUnHorario().getHorarioInicio()%>">
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="horarioFin" class="text-gray-600 small" >Horario Fin</label>
-                <input type="text" class="form-control form-control-user" name="horarioFin" id="horarioFin"
+                <input type="time" class="form-control form-control-user" name="horarioFin" id="horarioFin"
                        placeholder="Horario Fin" value="<%=odonto.getUnHorario().getHorarioFin()%>">
             </div>
         </div>
@@ -73,9 +73,11 @@
                        placeholder="Especialidad" value="<%=odonto.getEspecialidad()%>">
             </div>
         </div>
-            <button class="btn btn-primary btn-user btn-block" type="submit">
-                Guardar edición
+        <div class="text-center">
+            <button class="btn btn-primary btn-user" type="submit">
+                Guardar Edición
             </button>
+        </div>
        
         <hr>
     </form>

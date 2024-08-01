@@ -24,9 +24,11 @@
                        placeholder="Rol">
             </div>
         </div>
-            <button class="btn btn-primary btn-user btn-block" type="submit">
+        <div class="text-center">
+            <button class="btn btn-primary btn-user" type="submit">
                 Registrar Usuario
             </button>
+        </div>
         <hr>
     </form>
 </div>

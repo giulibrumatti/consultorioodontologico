@@ -29,9 +29,11 @@
                        placeholder="Rol" value="<%=us.getRol()%>">
             </div>
         </div>
-            <button class="btn btn-primary btn-user btn-block" type="submit">
-                Guardar edición
+        <div class="text-center">
+            <button class="btn btn-primary btn-user" type="submit">
+                Guardar Edición
             </button>
+        </div>
        
         <hr>
     </form>

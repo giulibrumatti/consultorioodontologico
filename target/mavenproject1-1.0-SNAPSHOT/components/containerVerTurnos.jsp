@@ -12,7 +12,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Pacientes</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Turnos</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -29,12 +29,12 @@
                             </tr>
                         </thead>
                         <%
-                            List<Turno> listaPacientes = (List) request.getSession().getAttribute("listaTurnos");
+                            List<Turno> listaTurnos = (List) request.getSession().getAttribute("listaTurnos");
                             SimpleDateFormat formatoDate = new SimpleDateFormat("dd-MM-yyyy");
-                            for (Turno turno : listaPacientes) {
+                            for (Turno turno : listaTurnos) {
                                 String fechaFormateada = (turno.getFechaTurno() != null) ? formatoDate.format(turno.getFechaTurno()) : "Fecha no disponible";
-                                String nombrePaciente = turno.getPacien().getNombre()+" "+turno.getPacien().getApellido();
-                                String nombreOdonto = turno.getOdonto().getNombre()+" "+turno.getOdonto().getApellido();
+                                String nombrePaciente = turno.getPacien().getNombre() + " " + turno.getPacien().getApellido();
+                                String nombreOdonto = turno.getOdonto().getNombre() + " " + turno.getOdonto().getApellido();
                         %>
                         <tbody>                               
                             <tr>
@@ -50,14 +50,14 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                         <input type="hidden" name="idTurno" value="<%=turno.getIdTurno()%>">
-                                        
+
                                     </form>
                                     <form name="eliminar" action="SVElimTurno" method="POST">
                                         <button type="submit" class="btn btn-danger btn-circle m-1" style="border-color:red; background-color:red; margin-right: 5px;">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                         <input type="hidden" name="idTurno" value="<%=turno.getIdTurno()%>">
-                                        
+
                                     </form>
                                 </td>
                             </tr>

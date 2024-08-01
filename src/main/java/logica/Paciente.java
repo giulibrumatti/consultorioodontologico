@@ -38,6 +38,10 @@ public class Paciente extends Persona implements Serializable{
     public void setListaTurnos(List<Turno> listaTurnos) {
         this.listaTurnos = listaTurnos;
     }
+    
+    public void agregarTurno(Turno turno){
+        this.listaTurnos.add(turno);
+    }
 
     public Responsable getUnResponsable() {
         return unResponsable;
