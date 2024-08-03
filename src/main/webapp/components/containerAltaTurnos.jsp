@@ -57,19 +57,19 @@
         <div class="form-group row">
             <div class="col-sm-6">
                 <label for="fechaTurno" class="text-gray-600 small" >Fecha del turno</label>
-                <input type="date" class="form-control form-control-user" id="fechaTurno"
+                <input type="date" class="form-control form-control-user" required id="fechaTurno"
                        name="fechaTurno" placeholder="Fecha del turno">
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="horaTurno" class="text-gray-600 small" >Hora del turno</label>
-                <input type="time" class="form-control form-control-user" id="horaTurno"
+                <input type="time" class="form-control form-control-user" required id="horaTurno"
                        name="horaTurno" placeholder="Hora del turno">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6">
                 <label for="afeccion" class="text-gray-600 small" >Afección</label>
-                <input type="text" class="form-control form-control-user" id="afeccion"
+                <input type="text" class="form-control form-control-user" required id="afeccion"
                        name="afeccion" placeholder="Afección">
             </div>
         </div>

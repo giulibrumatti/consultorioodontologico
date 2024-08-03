@@ -10,17 +10,17 @@
     <form class="user" action="SVUsuarios" method="POST">
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <input type="text" class="form-control form-control-user" name="usuario" id="usuario"
+                <input type="text" class="form-control form-control-user" required name="usuario" id="usuario"
                        placeholder="Usuario">
             </div>
             <div class="col-sm-6">
-                <input type="password" class="form-control form-control-user" name="contra" id="contra"
+                <input type="password" class="form-control form-control-user" required name="contra" id="contra"
                        placeholder="Contraseña" >              
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <input type="text" class="form-control form-control-user" name="rol" id="rol"
+                <input type="text" class="form-control form-control-user" required name="rol" id="rol"
                        placeholder="Rol">
             </div>
         </div>

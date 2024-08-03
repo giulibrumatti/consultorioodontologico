@@ -11,55 +11,55 @@
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="nombre" class="text-gray-600 small" >Nombre</label>
-                <input type="text" class="form-control form-control-user" id="nombre"
+                <input type="text" class="form-control form-control-user" required id="nombre"
                        name="nombre" placeholder="Nombre">
             </div>
             <div class="col-sm-6">
                 <label for="apellido" class="text-gray-600 small" >Apellido</label>
-                <input type="text" class="form-control form-control-user" id="apellido"
+                <input type="text" class="form-control form-control-user" required id="apellido"
                        name="apellido" placeholder="Apellido">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="dni" class="text-gray-600 small" >DNI</label>
-                <input type="text" class="form-control form-control-user" id="dni"
+                <input type="text" class="form-control form-control-user" required id="dni"
                        name="dni" placeholder="DNI">
             </div>
             <div class="col-sm-6">
                 <label for="tel" class="text-gray-600 small" >Teléfono</label>
-                <input type="text" class="form-control form-control-user" id="tel"
+                <input type="text" class="form-control form-control-user" required id="tel"
                        name="tel" placeholder="Teléfono">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="direccion" class="text-gray-600 small" >Dirección</label>
-                <input type="text" class="form-control form-control-user" id="direccion"
+                <input type="text" class="form-control form-control-user" required id="direccion"
                        name="direccion" placeholder="Dirección">
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="especialidad" class="text-gray-600 small" >Especialidad</label>
-                <input type="text" class="form-control form-control-user" id="especialidad"
+                <input type="text" class="form-control form-control-user" required id="especialidad"
                        name="especialidad" placeholder="Especialidad">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="horarioinicio" class="text-gray-600 small" >Horario inicio</label>
-                <input type="time" class="form-control form-control-user" id="horarioinicio"
+                <input type="time" class="form-control form-control-user" required id="horarioinicio"
                        name="horarioinicio" placeholder="Horario inicio">
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="horarioinicio" class="text-gray-600 small" >Horario fin</label>
-                <input type="time" class="form-control form-control-user" id="horariofin"
+                <input type="time" class="form-control form-control-user" required id="horariofin"
                        name="horariofin" placeholder="Horario fin">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-6">
                 <label for="fechanac" class="text-gray-600 small" >Fecha de Nacimiento</label>
-                <input type="date" class="form-control form-control-user" id="fechanac"
+                <input type="date" class="form-control form-control-user" required id="fechanac"
                        name="fechanac" placeholder="Fecha de nacimiento">
             </div>
         </div>

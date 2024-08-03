@@ -65,8 +65,8 @@ public class SVEditTurno extends HttpServlet {
             
         }
         Turno turno = (Turno) request.getSession().getAttribute("turnoEditar");
-        Odontologo odontologo = turno.getOdonto();
-        Paciente paciente = turno.getPacien();
+        Odontologo odontologo = control.traerOdontologo(idOdonto);
+        Paciente paciente = control.traerPaciente(idPaciente);
         turno.setHoraTurno(horaTurno);
         turno.setAfeccion(afeccion);
         turno.setFechaTurno(fechaTurno);

@@ -7,7 +7,6 @@ Este proyecto es un sistema de gestión para un consultorio odontológico, dise�
 - **Gestión de Pacientes:** Registro, modificación y eliminación de pacientes en el sistema.
 - **Gestión de Odontólogos:** Control de información de los odontólogos, incluyendo sus horarios.
 - **Gestión de Turnos:** Programación, cancelación y reprogramación de turnos.
-- **Interfaz de Usuario:** Una interfaz amigable y responsiva utilizando Bootstrap.
 
 ## Tecnologías Utilizadas
 
@@ -19,5 +18,4 @@ Este proyecto es un sistema de gestión para un consultorio odontológico, dise�
   - Apache Tomcat como servidor de aplicaciones
 
 - **Front-end:**
-  - HTML y CSS
   - Bootstrap para diseño responsivo
